@@ -1,0 +1,487 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>旅のスケジュール | AYtabi</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="schedule-page">
+
+   
+<!-- ヘッダー -->
+<header class="site-header">
+    <div class="header-inner">
+
+        <a href="index.html" class="header-brand">
+            <img src="images/aytabi_logo.png" alt="AYtabi">
+        </a>
+
+        <a href="https://surutto-qrtto.com/"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="ticket-link">
+            <i class="bi bi-ticket-perforated"></i>
+            <span>1dayチケット</span>
+            <i class="bi bi-arrow-up-right"></i>
+        </a>
+
+        <button class="menu-button"
+                type="button"
+                data-bs-toggle="offcanvas"
+                data-bs-target="#quickMenu"
+                aria-controls="quickMenu"
+                aria-label="メニューを開く">
+            <i class="bi bi-list"></i>
+        </button>
+
+    </div>
+</header>
+
+<!-- クイックメニュー -->
+<div class="offcanvas offcanvas-end"
+     tabindex="-1"
+     id="quickMenu"
+     aria-labelledby="quickMenuLabel">
+
+    <div class="offcanvas-header">
+        <h2 class="offcanvas-title fs-5" id="quickMenuLabel">
+            クイックアクセス
+        </h2>
+
+        <button type="button"
+                class="btn-close"
+                data-bs-dismiss="offcanvas"
+                aria-label="閉じる"></button>
+    </div>
+
+    <div class="offcanvas-body">
+        <div class="list-group list-group-flush">
+
+            <a href="https://surutto-qrtto.com/"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="list-group-item list-group-item-action py-3">
+                <i class="bi bi-ticket-perforated me-2"></i>
+                奈良・斑鳩1dayチケット
+            </a>
+
+            <a href="other.html"
+               class="list-group-item list-group-item-action py-3">
+                <i class="bi bi-calendar-check me-2"></i>
+                奈良監獄の予約情報
+            </a>
+
+            <a href="https://www.google.com/maps"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="list-group-item list-group-item-action py-3">
+                <i class="bi bi-geo-alt me-2"></i>
+                Googleマップ
+            </a>
+
+        </div>
+    </div>
+</div>
+
+
+<main class="spots-container">
+
+    <section class="spots-intro">
+        <div class="spots-eyebrow">
+            <span>AYtabi / DESTINATIONS</span>
+            <span>NARA GUIDE</span>
+        </div>
+        <h1>旅の立ち寄り先。</h1>
+        <p>気になる場所を、ちょっと詳しく。</p>
+    </section>
+
+    <!-- カテゴリータブ -->
+    <div class="spot-tabs" role="tablist" aria-label="スポットカテゴリー">
+        <button type="button" class="spot-tab active"
+                id="facility-tab"
+                data-bs-toggle="tab"
+                data-bs-target="#facility-panel"
+                role="tab" aria-controls="facility-panel"
+                aria-selected="true">
+            施設・観光
+        </button>
+
+        <button type="button" class="spot-tab"
+                id="gourmet-tab"
+                data-bs-toggle="tab"
+                data-bs-target="#gourmet-panel"
+                role="tab" aria-controls="gourmet-panel"
+                aria-selected="false">
+            グルメ
+        </button>
+    </div>
+
+    <div class="spot-legend">
+        <span><i class="bi bi-check-circle-fill"></i> 行程に含む</span>
+        <span><i class="bi bi-circle"></i> 立ち寄り候補</span>
+    </div>
+
+    <div class="tab-content">
+
+        <!-- 施設・観光 -->
+        <section class="tab-pane fade show active"
+                 id="facility-panel"
+                 role="tabpanel"
+                 aria-labelledby="facility-tab">
+
+            <div class="spot-grid">
+
+                <button type="button" class="spot-tile is-planned"
+                        id="hannyaji"
+                        data-bs-toggle="modal"
+                        data-bs-target="#spotHannyaji">
+                    <div class="spot-tile-photo">
+                        <img src="images/hannyaji.jpg" alt="般若寺" loading="lazy">
+                        <span class="spot-status planned">
+                            <i class="bi bi-check-circle-fill"></i> 行程内
+                        </span>
+                    </div>
+                    <div class="spot-tile-body">
+                        <span class="spot-tile-type">FLOWERS / 11:00</span>
+                        <h2>般若寺</h2>
+                        <p>秋のコスモス寺</p>
+                    </div>
+                </button>
+
+                <button type="button" class="spot-tile is-planned"
+                        id="prison"
+                        data-bs-toggle="modal"
+                        data-bs-target="#spotPrison">
+                    <div class="spot-tile-photo">
+                        <img src="images/nara-prison.jpg" alt="奈良監獄ミュージアム" loading="lazy">
+                        <span class="spot-status planned">
+                            <i class="bi bi-check-circle-fill"></i> 行程内
+                        </span>
+                    </div>
+                    <div class="spot-tile-body">
+                        <span class="spot-tile-type">HERITAGE / 12:15</span>
+                        <h2>奈良監獄ミュージアム</h2>
+                        <p>明治の赤レンガ建築</p>
+                    </div>
+                </button>
+
+                <button type="button" class="spot-tile is-planned"
+                        id="park"
+                        data-bs-toggle="modal"
+                        data-bs-target="#spotPark">
+                    <div class="spot-tile-photo">
+                        <img src="images/nara-park.jpg" alt="奈良公園" loading="lazy">
+                        <span class="spot-status planned">
+                            <i class="bi bi-check-circle-fill"></i> 行程内
+                        </span>
+                    </div>
+                    <div class="spot-tile-body">
+                        <span class="spot-tile-type">NATURE / 15:30頃</span>
+                        <h2>奈良公園</h2>
+                        <p>鹿と奈良の街を散策</p>
+                    </div>
+                </button>
+
+                <button type="button" class="spot-tile is-optional"
+                        id="kasuga"
+                        data-bs-toggle="modal"
+                        data-bs-target="#spotKasuga">
+                    <div class="spot-tile-photo">
+                        <img src="images/kasuga.jpg" alt="春日大社" loading="lazy">
+                        <span class="spot-status optional">立ち寄り候補</span>
+                    </div>
+                    <div class="spot-tile-body">
+                        <span class="spot-tile-type">SHRINE</span>
+                        <h2>春日大社</h2>
+                        <p>朱塗りの社殿と燈籠</p>
+                    </div>
+                </button>
+
+            </div>
+        </section>
+
+        <!-- グルメ -->
+        <section class="tab-pane fade"
+                 id="gourmet-panel"
+                 role="tabpanel"
+                 aria-labelledby="gourmet-tab">
+
+            <div class="spot-grid">
+
+                <button type="button" class="spot-tile is-planned"
+                        id="dinner"
+                        data-bs-toggle="modal"
+                        data-bs-target="#spotDinner">
+                    <div class="spot-tile-photo">
+                        <img src="images/dinner.jpg" alt="なら酒蔵なべ" loading="lazy">
+                        <span class="spot-status planned">
+                            <i class="bi bi-check-circle-fill"></i> 行程内
+                        </span>
+                    </div>
+                    <div class="spot-tile-body">
+                        <span class="spot-tile-type">DINNER / 18:00</span>
+                        <h2>なら酒蔵なべ</h2>
+                        <p>奈良の地酒と酒粕鍋</p>
+                    </div>
+                </button>
+
+                <button type="button" class="spot-tile is-optional"
+                        id="izasa"
+                        data-bs-toggle="modal"
+                        data-bs-target="#spotIzasa">
+                    <div class="spot-tile-photo">
+                        <img src="images/izasa.jpg" alt="ゐざさ" loading="lazy">
+                        <span class="spot-status optional">立ち寄り候補</span>
+                    </div>
+                    <div class="spot-tile-body">
+                        <span class="spot-tile-type">LOCAL FOOD</span>
+                        <h2>ゐざさ</h2>
+                        <p>奈良名物・柿の葉寿司</p>
+                    </div>
+                </button>
+
+            </div>
+        </section>
+
+    </div>
+</main>
+
+<!-- 下部ナビ -->
+<nav class="bottom-nav fixed-bottom">
+    <div class="d-flex">
+
+        <a href="index.html" class="bottom-nav-item">
+            <i class="bi bi-house"></i>
+            <span>ホーム</span>
+        </a>
+
+        <a href="schedule.html" class="bottom-nav-item active"
+           aria-current="page">
+            <i class="bi bi-clock"></i>
+            <span>予定</span>
+        </a>
+
+        <a href="spots.html" class="bottom-nav-item">
+            <i class="bi bi-geo-alt"></i>
+            <span>スポット</span>
+        </a>
+
+        <a href="other.html" class="bottom-nav-item">
+            <i class="bi bi-three-dots"></i>
+            <span>その他</span>
+        </a>
+
+    </div>
+</nav>
+
+<!-- 詳細モーダル：般若寺 -->
+<div class="modal fade" id="spotHannyaji" tabindex="-1"
+     aria-labelledby="spotHannyajiTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content spot-modal">
+            <div class="modal-header">
+                <div>
+                    <span class="spot-modal-eyebrow">FLOWERS / ITINERARY</span>
+                    <h2 class="modal-title" id="spotHannyajiTitle">般若寺</h2>
+                </div>
+                <button type="button" class="btn-close"
+                        data-bs-dismiss="modal" aria-label="閉じる"></button>
+            </div>
+            <div class="modal-body">
+                <img class="spot-modal-image" src="images/hannyaji.jpg" alt="般若寺のコスモス">
+                <p class="spot-modal-description">
+                    「コスモス寺」として知られる古刹。
+                    秋の花と十三重石塔、楼門などの歴史的建築を一緒に楽しめる。
+                </p>
+                <dl class="spot-modal-info">
+                    <div><dt>訪問予定</dt><dd>11:00〜12:00</dd></div>
+                    <div><dt>拝観時間</dt><dd>9:00〜17:00</dd></div>
+                    <div><dt>拝観料</dt><dd>大人700円（コスモス花期）</dd></div>
+                    <div><dt>住所</dt><dd>奈良市般若寺町221</dd></div>
+                </dl>
+                <div class="spot-modal-links">
+                    <a href="https://www.hannyaji.com/" target="_blank" rel="noopener noreferrer">公式サイト <i class="bi bi-arrow-up-right"></i></a>
+                    <a href="https://maps.app.goo.gl/G6aQbC5gXgnDzLTx5" target="_blank" rel="noopener noreferrer">地図を見る <i class="bi bi-geo-alt"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 詳細モーダル：奈良監獄 -->
+<div class="modal fade" id="spotPrison" tabindex="-1"
+     aria-labelledby="spotPrisonTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content spot-modal">
+            <div class="modal-header">
+                <div>
+                    <span class="spot-modal-eyebrow">HERITAGE / ITINERARY</span>
+                    <h2 class="modal-title" id="spotPrisonTitle">奈良監獄ミュージアム</h2>
+                </div>
+                <button type="button" class="btn-close"
+                        data-bs-dismiss="modal" aria-label="閉じる"></button>
+            </div>
+            <div class="modal-body">
+                <img class="spot-modal-image" src="images/nara-prison.jpg" alt="旧奈良監獄">
+                <p class="spot-modal-description">
+                    重要文化財「旧奈良監獄」を活用したミュージアム。
+                    放射状の収容棟や赤レンガの建築が見どころ。
+                </p>
+                <dl class="spot-modal-info">
+                    <div><dt>訪問予定</dt><dd>12:15〜15:00</dd></div>
+                    <div><dt>予約枠</dt><dd>12:00〜14:00入館</dd></div>
+                    <div><dt>開館時間</dt><dd>9:00〜17:00</dd></div>
+                    <div><dt>入館料</dt><dd>日本在住の大人2,500円</dd></div>
+                    <div><dt>住所</dt><dd>奈良市般若寺町18</dd></div>
+                </dl>
+                <p class="spot-modal-note">※ 中央看守所の見学は別途予約が必要。</p>
+                <div class="spot-modal-links">
+                    <a href="https://hoshinoresorts.com/nara-prison-museum/ja/" target="_blank" rel="noopener noreferrer">公式サイト <i class="bi bi-arrow-up-right"></i></a>
+                    <a href="https://www.google.com/maps/search/?api=1&amp;query=奈良監獄ミュージアム" target="_blank" rel="noopener noreferrer">地図を見る <i class="bi bi-geo-alt"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 詳細モーダル：奈良公園 -->
+<div class="modal fade" id="spotPark" tabindex="-1"
+     aria-labelledby="spotParkTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content spot-modal">
+            <div class="modal-header">
+                <div>
+                    <span class="spot-modal-eyebrow">NATURE / ITINERARY</span>
+                    <h2 class="modal-title" id="spotParkTitle">奈良公園</h2>
+                </div>
+                <button type="button" class="btn-close"
+                        data-bs-dismiss="modal" aria-label="閉じる"></button>
+            </div>
+            <div class="modal-body">
+                <img class="spot-modal-image" src="images/nara-park.jpg" alt="奈良公園の鹿">
+                <p class="spot-modal-description">
+                    鹿と出会いながら奈良の街を散策。
+                    東大寺南大門や夢風ひろば周辺を中心に、時間に合わせて自由に過ごす。
+                </p>
+                <dl class="spot-modal-info">
+                    <div><dt>訪問予定</dt><dd>15:30頃〜17:00</dd></div>
+                    <div><dt>エリア</dt><dd>東大寺南大門・夢風ひろば周辺</dd></div>
+                    <div><dt>入園料</dt><dd>奈良公園自体は無料</dd></div>
+                </dl>
+                <div class="spot-modal-links">
+                    <a href="https://www.google.com/maps/search/?api=1&amp;query=奈良公園" target="_blank" rel="noopener noreferrer">地図を見る <i class="bi bi-geo-alt"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 詳細モーダル：春日大社 -->
+<div class="modal fade" id="spotKasuga" tabindex="-1"
+     aria-labelledby="spotKasugaTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content spot-modal">
+            <div class="modal-header">
+                <div>
+                    <span class="spot-modal-eyebrow">SHRINE / OPTIONAL</span>
+                    <h2 class="modal-title" id="spotKasugaTitle">春日大社</h2>
+                </div>
+                <button type="button" class="btn-close"
+                        data-bs-dismiss="modal" aria-label="閉じる"></button>
+            </div>
+            <div class="modal-body">
+                <img class="spot-modal-image" src="images/kasuga.jpg" alt="春日大社">
+                <p class="spot-modal-description">
+                    朱塗りの社殿と数多くの石燈籠が美しい神社。
+                    奈良公園からの散策候補。ただし境内は広いため、時間と体力に余裕がある場合に。
+                </p>
+                <dl class="spot-modal-info">
+                    <div><dt>訪問予定</dt><dd>未定・立ち寄り候補</dd></div>
+                    <div><dt>住所</dt><dd>奈良市春日野町160</dd></div>
+                </dl>
+                <div class="spot-modal-links">
+                    <a href="https://www.kasugataisha.or.jp/" target="_blank" rel="noopener noreferrer">公式サイト <i class="bi bi-arrow-up-right"></i></a>
+                    <a href="https://www.google.com/maps/search/?api=1&amp;query=春日大社" target="_blank" rel="noopener noreferrer">地図を見る <i class="bi bi-geo-alt"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 詳細モーダル：なら酒蔵なべ -->
+<div class="modal fade" id="spotDinner" tabindex="-1"
+     aria-labelledby="spotDinnerTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content spot-modal">
+            <div class="modal-header">
+                <div>
+                    <span class="spot-modal-eyebrow">DINNER / ITINERARY</span>
+                    <h2 class="modal-title" id="spotDinnerTitle">なら酒蔵なべ</h2>
+                </div>
+                <button type="button" class="btn-close"
+                        data-bs-dismiss="modal" aria-label="閉じる"></button>
+            </div>
+            <div class="modal-body">
+                <img class="spot-modal-image" src="images/dinner.jpg" alt="酒粕鍋">
+                <p class="spot-modal-description">
+                    奈良の地酒と酒粕鍋を楽しめるお店。
+                    看板メニューは酒粕玄人鍋。締めのカルボナーラ風パスタも気になる。
+                </p>
+                <dl class="spot-modal-info">
+                    <div><dt>夕食予定</dt><dd>18:00〜20:00</dd></div>
+                    <div><dt>住所</dt><dd>奈良市今御門町34-1</dd></div>
+                </dl>
+                <div class="spot-modal-links">
+                    <a href="https://www.google.com/maps/search/?api=1&amp;query=なら酒蔵なべ" target="_blank" rel="noopener noreferrer">地図を見る <i class="bi bi-geo-alt"></i></a>
+                    <a href="schedule.html#schedule-06">予定を見る <i class="bi bi-calendar3"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 詳細モーダル：ゐざさ -->
+<div class="modal fade" id="spotIzasa" tabindex="-1"
+     aria-labelledby="spotIzasaTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content spot-modal">
+            <div class="modal-header">
+                <div>
+                    <span class="spot-modal-eyebrow">LOCAL FOOD / OPTIONAL</span>
+                    <h2 class="modal-title" id="spotIzasaTitle">ゐざさ</h2>
+                </div>
+                <button type="button" class="btn-close"
+                        data-bs-dismiss="modal" aria-label="閉じる"></button>
+            </div>
+            <div class="modal-body">
+                <img class="spot-modal-image" src="images/izasa.jpg" alt="柿の葉寿司">
+                <p class="spot-modal-description">
+                    奈良名物の柿の葉寿司や笹巻き寿司を扱うお店。
+                    東大寺門前の夢風ひろばにあり、散策途中の寄り道候補。
+                </p>
+                <dl class="spot-modal-info">
+                    <div><dt>訪問予定</dt><dd>未定・立ち寄り候補</dd></div>
+                    <div><dt>売店</dt><dd>10:00〜17:00</dd></div>
+                    <div><dt>住所</dt><dd>奈良市春日野町16 夢風ひろば内</dd></div>
+                </dl>
+                <div class="spot-modal-links">
+                    <a href="https://www.izasa.co.jp/shop/todaiji-new/" target="_blank" rel="noopener noreferrer">公式サイト <i class="bi bi-arrow-up-right"></i></a>
+                    <a href="https://www.google.com/maps/search/?api=1&amp;query=ゐざさ東大寺門前夢風ひろば店" target="_blank" rel="noopener noreferrer">地図を見る <i class="bi bi-geo-alt"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,289 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>奈良へ、おでかけ。｜AYtabi</title>
+
+    <!-- Bootstrap -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+        rel="stylesheet">
+
+    <!-- 自作CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- JavaScript -->
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script defer src="js/script.js"></script>
+</head>
+
+<body>
+
+    <!-- ヘッダー -->
+    <header class="site-header">
+        <div class="header-inner">
+
+            <!-- AYtabi ロゴ -->
+            <a href="index.html" class="header-brand">
+                <img src="images/aytabi_logo.png"
+                     alt="AYtabi">
+            </a>
+
+            <!-- チケット -->
+            <a href="https://surutto-qrtto.com/"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="ticket-link">
+                <i class="bi bi-ticket-perforated"></i>
+                <span>1dayチケット</span>
+                <i class="bi bi-arrow-up-right"></i>
+            </a>
+
+            <!-- メニュー -->
+            <button class="menu-button"
+                    type="button"
+                    data-bs-toggle="offcanvas"
+                    data-bs-target="#quickMenu"
+                    aria-controls="quickMenu"
+                    aria-label="メニューを開く">
+                <i class="bi bi-list"></i>
+            </button>
+
+        </div>
+    </header>
+
+    <!-- クイックメニュー -->
+    <div class="offcanvas offcanvas-end"
+         tabindex="-1"
+         id="quickMenu"
+         aria-labelledby="quickMenuLabel">
+
+        <div class="offcanvas-header">
+            <h2 class="offcanvas-title fs-5" id="quickMenuLabel">
+                クイックアクセス
+            </h2>
+            <button type="button"
+                    class="btn-close"
+                    data-bs-dismiss="offcanvas"
+                    aria-label="閉じる"></button>
+        </div>
+
+        <div class="offcanvas-body">
+            <div class="list-group list-group-flush">
+
+                <a href="https://surutto-qrtto.com/"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="list-group-item list-group-item-action py-3">
+                    <i class="bi bi-ticket-perforated me-2"></i>
+                    奈良・斑鳩1dayチケット
+                </a>
+
+                <a href="other.html"
+                   class="list-group-item list-group-item-action py-3">
+                    <i class="bi bi-calendar-check me-2"></i>
+                    奈良監獄の予約情報
+                </a>
+
+                <a href="https://www.google.com/maps"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="list-group-item list-group-item-action py-3">
+                    <i class="bi bi-geo-alt me-2"></i>
+                    Googleマップ
+                </a>
+
+            </div>
+        </div>
+    </div>
+
+<!-- メイン -->
+<main class="container itinerary-main py-4">
+
+    <!-- 旅行タイトル -->
+    <section class="trip-intro mb-4">
+
+        <div class="trip-eyebrow">
+            TRAVEL No. 001 — AUTUMN
+        </div>
+
+        <h1 class="trip-title">
+            奈良へ、おでかけ。
+        </h1>
+
+        <div class="trip-date">
+            2026.10.24 SAT
+        </div>
+
+        <!-- 集合情報 -->
+
+<div class="meeting-info">
+    <div class="meeting-content">
+        <span class="meeting-heading">MEETING</span>
+        <div class="meeting-main">
+            <strong>09:40</strong>
+            <span>大阪難波駅</span>
+        </div>
+    </div>
+
+    <a href="https://www.google.com/maps/search/?api=1&query=大阪難波駅"
+       class="meeting-map"
+       target="_blank"
+       rel="noopener noreferrer"
+       aria-label="大阪難波駅を地図で見る">
+        <i class="bi bi-geo-alt"></i>
+        <i class="bi bi-arrow-up-right"></i>
+    </a>
+</div>
+
+
+    </section>
+
+    <!-- NEXT -->
+    <section class="next-section mb-4">
+
+        <div class="next-card">
+
+            <!-- 雑誌のページ番号風 -->
+
+
+<div class="next-card-header">
+    <span class="next-card-label">UP NEXT</span>
+
+    <span class="next-heading-line"></span>
+
+    <div class="next-chapter">
+        <span class="chapter-current" id="nextCount">01</span>
+        <span class="chapter-divider">/</span>
+        <span class="chapter-total" id="nextTotal">07</span>
+    </div>
+</div>
+
+
+
+            <!-- 予定＋写真 -->
+            <div class="next-main">
+
+                <div class="next-content">
+                    <div class="next-time" id="nextTime">09:40</div>
+
+                    <h2 id="nextTitle">大阪難波駅 集合</h2>
+
+                    <p id="nextDescription">
+                        近鉄電車で奈良へ出発
+                    </p>
+                </div>
+
+                <div class="next-photo-wrap" id="nextPhotoWrap">
+                    <img src="images/namba.jpg"
+                         alt=""
+                         class="next-photo"
+                         id="nextPhoto">
+                </div>
+
+            </div>
+
+            <!-- 下部 -->
+            <div class="next-bottom">
+
+                <div class="next-links">
+                    <a id="nextSpotLink" href="spots.html">
+                        <i class="bi bi-info-circle"></i>
+                        詳細を見る
+                    </a>
+
+                    <a id="nextMapLink"
+                       href="#"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        <i class="bi bi-geo-alt"></i>
+                        地図を見る
+                    </a>
+                </div>
+
+                <div class="next-controls">
+
+                    <button type="button"
+                            id="nowSchedule"
+                            class="next-now"
+                            hidden>
+                        NOW
+                    </button>
+
+                    <button type="button"
+                            id="prevSchedule"
+                            aria-label="前の予定">
+                        <i class="bi bi-chevron-left"></i>
+                    </button>
+
+                    <button type="button"
+                            id="nextSchedule"
+                            aria-label="次の予定">
+                        <i class="bi bi-chevron-right"></i>
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ショートカット -->
+    <section class="home-shortcuts mb-4">
+
+        <a href="schedule.html" class="home-shortcut">
+            <i class="bi bi-calendar3"></i>
+            <span>スケジュール</span>
+            <i class="bi bi-chevron-right"></i>
+        </a>
+
+        <a href="spots.html" class="home-shortcut">
+            <i class="bi bi-geo-alt"></i>
+            <span>スポット</span>
+            <i class="bi bi-chevron-right"></i>
+        </a>
+
+    </section>
+
+</main>
+
+
+    <!-- 下部ナビ -->
+    <nav class="bottom-nav fixed-bottom">
+        <div class="d-flex">
+
+            <a href="index.html" class="bottom-nav-item active">
+                <i class="bi bi-house"></i>
+                <span>ホーム</span>
+            </a>
+
+            <a href="schedule.html" class="bottom-nav-item">
+                <i class="bi bi-clock"></i>
+                <span>予定</span>
+            </a>
+
+            <a href="spots.html" class="bottom-nav-item">
+                <i class="bi bi-geo-alt"></i>
+                <span>スポット</span>
+            </a>
+
+            <a href="other.html" class="bottom-nav-item">
+                <i class="bi bi-three-dots"></i>
+                <span>その他</span>
+            </a>
+
+        </div>
+    </nav>
+
+</body>
+</html>
