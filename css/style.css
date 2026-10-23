@@ -1902,8 +1902,3 @@ body {
         grid-template-columns: 82px minmax(0, 1fr);
     }
 }
-
-/* スクリーンショット撮影用 */
-.bottom-nav {
-    position: static !important;
-}

@@ -1,0 +1,76 @@
+
+/* 固定フッター */
+#footer .navbar {
+    padding: 4px 0 !important;
+    min-height: 0;
+}
+
+#footer .nav-link {
+    padding: 0 !important;
+    color: #857166;
+    line-height: 1.1;
+}
+
+#footer .nav-link i {
+    font-size: 18px !important;
+    line-height: 1;
+    margin-bottom: 2px;
+}
+
+#footer .nav-link small {
+    font-size: 10px;
+}
+
+#footer .nav-link.active {
+    color: #bf6845;
+    font-weight: bold;
+}
+
+/* 固定フッター分の余白 */
+body {
+    padding-bottom: calc(75px + env(safe-area-inset-bottom));
+}
+
+
+/* 共通ヘッダー */
+.site-header {
+    background: #f8f1e9;
+    border-bottom: 1px solid #eadbd0;
+}
+
+/* チケットリンク */
+.ticket-link {
+    min-height: 42px;
+    padding: 8px 10px;
+    background: #fffdf9;
+    border: 1px solid #eadbd0;
+    border-radius: 12px;
+    color: #b86b50;
+    font-size: 12px;
+    font-weight: 600;
+    white-space: nowrap;
+    transition: background 0.2s;
+}
+
+.ticket-link:hover {
+    background: #f3e5d9;
+    color: #a65338;
+}
+
+.ticket-link > .bi:first-child {
+    font-size: 16px;
+}
+
+.ticket-external {
+    font-size: 10px;
+}
+
+/* スマホ */
+@media (max-width: 375px) {
+    .ticket-link {
+        padding: 8px 5px;
+        font-size: 11px;
+        gap: 5px !important;
+    }
+}
+

@@ -1,95 +1,35 @@
 
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
 
     <title>旅のスケジュール | AYtabi</title>
 
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
-<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css">
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+          rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+          rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/schedule.css">
+
+    <!-- 共通パーツ -->
+    <script defer src="js/common.js"></script>
+    <script defer src="js/schedule.js"></script>
 </head>
 
 <body class="schedule-page">
 
-   
-<!-- ヘッダー -->
-<header class="site-header">
-    <div class="header-inner">
-
-        <a href="index.html" class="header-brand">
-            <img src="images/aytabi_logo.png" alt="AYtabi">
-        </a>
-
-        <a href="https://surutto-qrtto.com/"
-           target="_blank"
-           rel="noopener noreferrer"
-           class="ticket-link">
-            <i class="bi bi-ticket-perforated"></i>
-            <span>1dayチケット</span>
-            <i class="bi bi-arrow-up-right"></i>
-        </a>
-
-        <button class="menu-button"
-                type="button"
-                data-bs-toggle="offcanvas"
-                data-bs-target="#quickMenu"
-                aria-controls="quickMenu"
-                aria-label="メニューを開く">
-            <i class="bi bi-list"></i>
-        </button>
-
-    </div>
-</header>
-
-<!-- クイックメニュー -->
-<div class="offcanvas offcanvas-end"
-     tabindex="-1"
-     id="quickMenu"
-     aria-labelledby="quickMenuLabel">
-
-    <div class="offcanvas-header">
-        <h2 class="offcanvas-title fs-5" id="quickMenuLabel">
-            クイックアクセス
-        </h2>
-
-        <button type="button"
-                class="btn-close"
-                data-bs-dismiss="offcanvas"
-                aria-label="閉じる"></button>
-    </div>
-
-    <div class="offcanvas-body">
-        <div class="list-group list-group-flush">
-
-            <a href="https://surutto-qrtto.com/"
-               target="_blank"
-               rel="noopener noreferrer"
-               class="list-group-item list-group-item-action py-3">
-                <i class="bi bi-ticket-perforated me-2"></i>
-                奈良・斑鳩1dayチケット
-            </a>
-
-            <a href="other.html"
-               class="list-group-item list-group-item-action py-3">
-                <i class="bi bi-calendar-check me-2"></i>
-                奈良監獄の予約情報
-            </a>
-
-            <a href="https://www.google.com/maps"
-               target="_blank"
-               rel="noopener noreferrer"
-               class="list-group-item list-group-item-action py-3">
-                <i class="bi bi-geo-alt me-2"></i>
-                Googleマップ
-            </a>
-
-        </div>
-    </div>
-</div>
-
+    <!-- 共通ヘッダー -->
+    <div id="header"></div>
 
     <main class="schedule-container">
 
@@ -122,8 +62,10 @@
 
                     <a class="timeline-spot-link"
                        href="https://www.google.com/maps/search/?api=1&amp;query=大阪難波駅"
-                       target="_blank" rel="noopener noreferrer">
-                        <i class="bi bi-geo-alt"></i> 地図を見る
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        <i class="bi bi-geo-alt"></i>
+                        地図を見る
                     </a>
                 </div>
             </article>
@@ -139,7 +81,7 @@
                 <div class="transfer-body">
                     <div class="transfer-heading">
                         <strong>近鉄電車</strong>
-                        <span class="transfer-duration">約37分（乗車時間・仮）</span>
+                        <span class="transfer-duration">約37分（仮）</span>
                     </div>
 
                     <p class="transfer-route">
@@ -151,16 +93,20 @@
                     </p>
 
                     <div class="transfer-actions">
-                        <button type="button" class="transfer-action"
+                        <button type="button"
+                                class="transfer-action"
                                 data-bs-toggle="modal"
                                 data-bs-target="#trainTimetableModal">
-                            <i class="bi bi-clock"></i> 時刻表
+                            <i class="bi bi-clock"></i>
+                            時刻表
                         </button>
 
                         <a class="transfer-action"
                            href="https://www.google.com/maps/dir/?api=1&amp;origin=大阪難波駅&amp;destination=近鉄奈良駅&amp;travelmode=transit"
-                           target="_blank" rel="noopener noreferrer">
-                            <i class="bi bi-signpost-split"></i> 経路検索
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            <i class="bi bi-signpost-split"></i>
+                            経路検索
                         </a>
                     </div>
                 </div>
@@ -204,22 +150,28 @@
                     </p>
 
                     <div class="transfer-actions">
-                        <button type="button" class="transfer-action"
+                        <button type="button"
+                                class="transfer-action"
                                 data-bs-toggle="modal"
                                 data-bs-target="#hannyajiBusModal">
-                            <i class="bi bi-clock"></i> 時刻表
+                            <i class="bi bi-clock"></i>
+                            時刻表
                         </button>
 
-                        <button type="button" class="transfer-action"
+                        <button type="button"
+                                class="transfer-action"
                                 data-bs-toggle="modal"
                                 data-bs-target="#hannyajiStopModal">
-                            <i class="bi bi-geo-alt"></i> バス乗り場
+                            <i class="bi bi-geo-alt"></i>
+                            バス乗り場
                         </button>
 
                         <a class="transfer-action"
                            href="https://www.google.com/maps/dir/?api=1&amp;origin=近鉄奈良駅&amp;destination=般若寺&amp;travelmode=transit"
-                           target="_blank" rel="noopener noreferrer">
-                            <i class="bi bi-signpost-split"></i> 経路検索
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            <i class="bi bi-signpost-split"></i>
+                            経路検索
                         </a>
                     </div>
                 </div>
@@ -245,11 +197,15 @@
 
                     <div class="timeline-spot-actions">
                         <a href="spots.html#hannyaji">
-                            <i class="bi bi-info-circle"></i> 詳細を見る
+                            <i class="bi bi-info-circle"></i>
+                            詳細を見る
                         </a>
+
                         <a href="https://maps.app.goo.gl/G6aQbC5gXgnDzLTx5"
-                           target="_blank" rel="noopener noreferrer">
-                            <i class="bi bi-geo-alt"></i> 地図を見る
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            <i class="bi bi-geo-alt"></i>
+                            地図を見る
                         </a>
                     </div>
                 </div>
@@ -280,8 +236,10 @@
                     <div class="transfer-actions">
                         <a class="transfer-action"
                            href="https://www.google.com/maps/dir/?api=1&amp;origin=般若寺&amp;destination=旧奈良監獄&amp;travelmode=walking"
-                           target="_blank" rel="noopener noreferrer">
-                            <i class="bi bi-signpost-split"></i> 徒歩ルート
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            <i class="bi bi-signpost-split"></i>
+                            徒歩ルート
                         </a>
                     </div>
                 </div>
@@ -307,11 +265,15 @@
 
                     <div class="timeline-spot-actions">
                         <a href="spots.html#prison">
-                            <i class="bi bi-info-circle"></i> 詳細を見る
+                            <i class="bi bi-info-circle"></i>
+                            詳細を見る
                         </a>
+
                         <a href="https://www.google.com/maps/search/?api=1&amp;query=旧奈良監獄"
-                           target="_blank" rel="noopener noreferrer">
-                            <i class="bi bi-geo-alt"></i> 地図を見る
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            <i class="bi bi-geo-alt"></i>
+                            地図を見る
                         </a>
                     </div>
                 </div>
@@ -340,28 +302,36 @@
                     </p>
 
                     <div class="transfer-actions">
-                        <button type="button" class="transfer-action"
+                        <button type="button"
+                                class="transfer-action"
                                 data-bs-toggle="modal"
                                 data-bs-target="#parkBusModal">
-                            <i class="bi bi-clock"></i> 時刻表
+                            <i class="bi bi-clock"></i>
+                            時刻表
                         </button>
 
-                        <button type="button" class="transfer-action"
+                        <button type="button"
+                                class="transfer-action"
                                 data-bs-toggle="modal"
                                 data-bs-target="#parkStopModal">
-                            <i class="bi bi-geo-alt"></i> バス乗り場
+                            <i class="bi bi-geo-alt"></i>
+                            バス乗り場
                         </button>
 
                         <a class="transfer-action"
                            href="https://www.google.com/maps/dir/?api=1&amp;origin=旧奈良監獄&amp;destination=東大寺大仏殿・春日大社前&amp;travelmode=transit"
-                           target="_blank" rel="noopener noreferrer">
-                            <i class="bi bi-signpost-split"></i> バス経路
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            <i class="bi bi-signpost-split"></i>
+                            バス経路
                         </a>
 
                         <a class="transfer-action"
                            href="https://www.google.com/maps/dir/?api=1&amp;origin=旧奈良監獄&amp;destination=東大寺南大門&amp;travelmode=walking"
-                           target="_blank" rel="noopener noreferrer">
-                            <i class="bi bi-person-walking"></i> 徒歩経路
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            <i class="bi bi-person-walking"></i>
+                            徒歩経路
                         </a>
                     </div>
                 </div>
@@ -391,11 +361,15 @@
 
                     <div class="timeline-spot-actions">
                         <a href="spots.html#park">
-                            <i class="bi bi-info-circle"></i> 詳細を見る
+                            <i class="bi bi-info-circle"></i>
+                            詳細を見る
                         </a>
+
                         <a href="https://www.google.com/maps/search/?api=1&amp;query=奈良公園"
-                           target="_blank" rel="noopener noreferrer">
-                            <i class="bi bi-geo-alt"></i> 地図を見る
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            <i class="bi bi-geo-alt"></i>
+                            地図を見る
                         </a>
                     </div>
                 </div>
@@ -421,296 +395,430 @@
                 </div>
             </div>
 
-<!-- 06 夕食 -->
-<article class="timeline-spot" id="schedule-06">
-    <div class="timeline-marker">
-        <span class="timeline-dot"></span>
-    </div>
+            <!-- 06 夕食 -->
+            <article class="timeline-spot" id="schedule-06">
+                <div class="timeline-marker">
+                    <span class="timeline-dot"></span>
+                </div>
 
-    <div class="timeline-spot-body">
-        <span class="timeline-time">18:00 — 20:00</span>
-        <span class="timeline-chapter">06 / DINNER</span>
+                <div class="timeline-spot-body">
+                    <span class="timeline-time">18:00 — 20:00</span>
+                    <span class="timeline-chapter">06 / DINNER</span>
 
-        <h2>なら酒蔵なべや</h2>
-        <p>奈良の地酒と鍋で、一日の締めくくり。</p>
+                    <h2>なら酒蔵なべや</h2>
+                    <p>奈良の地酒と鍋で、一日の締めくくり。</p>
 
-        <img class="timeline-photo" src="images/dinner.jpg" alt="なら酒蔵なべや" loading="lazy">
+                    <img class="timeline-photo"
+                         src="images/dinner.jpg"
+                         alt="なら酒蔵なべや"
+                         loading="lazy">
 
-        <div class="timeline-spot-actions">
-            <button type="button"
-                    class="dinner-menu-trigger"
-                    data-bs-toggle="modal"
-                    data-bs-target="#dinnerMenuModal">
-                <i class="bi bi-journal-text"></i>
-                メニューを見る
-            </button>
-        </div>
-    </div>
-</article>
+                    <div class="timeline-spot-actions">
+                        <button type="button"
+                                class="dinner-menu-trigger"
+                                data-bs-toggle="modal"
+                                data-bs-target="#dinnerMenuModal">
+                            <i class="bi bi-journal-text"></i>
+                            メニューを見る
+                        </button>
+                    </div>
+                </div>
+            </article>
 
         </section>
     </main>
 
+    <!-- 共通フッター -->
+    <div id="footer"></div>
 
-<!-- 下部ナビ -->
-<nav class="bottom-nav fixed-bottom">
-    <div class="d-flex">
+    <!-- 近鉄電車 時刻表 -->
+    <div class="modal fade"
+         id="trainTimetableModal"
+         tabindex="-1"
+         aria-labelledby="trainTimetableTitle"
+         aria-hidden="true">
 
-        <a href="index.html" class="bottom-nav-item">
-            <i class="bi bi-house"></i>
-            <span>ホーム</span>
-        </a>
-
-        <a href="schedule.html" class="bottom-nav-item active"
-           aria-current="page">
-            <i class="bi bi-clock"></i>
-            <span>予定</span>
-        </a>
-
-        <a href="spots.html" class="bottom-nav-item">
-            <i class="bi bi-geo-alt"></i>
-            <span>スポット</span>
-        </a>
-
-        <a href="other.html" class="bottom-nav-item">
-            <i class="bi bi-three-dots"></i>
-            <span>その他</span>
-        </a>
-
-    </div>
-</nav>
-
-
-    <!-- 近鉄電車 時刻表モーダル -->
-    <div class="modal fade" id="trainTimetableModal" tabindex="-1"
-         aria-labelledby="trainTimetableTitle" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content travel-modal">
                 <div class="modal-header">
                     <h2 class="modal-title fs-5" id="trainTimetableTitle">
-                        <i class="bi bi-train-front"></i> 近鉄電車
+                        <i class="bi bi-train-front"></i>
+                        近鉄電車
                     </h2>
-                    <button type="button" class="btn-close"
-                            data-bs-dismiss="modal" aria-label="閉じる"></button>
+                    <button type="button"
+                            class="btn-close"
+                            data-bs-dismiss="modal"
+                            aria-label="閉じる"></button>
                 </div>
-                <div class="modal-body">
-                    <p class="modal-route">大阪難波駅 → 近鉄奈良駅</p>
-                    <p>09:54発 → 10:31着（仮・要確認）</p>
-                    <p class="modal-muted">
-                        列車種別・乗り場・料金は確認後に追加。
-                    </p>
-                </div>
+
+<div class="modal-body">
+    <p class="modal-route">大阪難波駅 → 近鉄奈良駅</p>
+
+    <div class="p-3 rounded-3 mb-3" style="background:#f8f1e9;">
+        <div class="small text-secondary mb-1">予定の電車 / 快速急行</div>
+        <div class="fs-4 fw-bold" style="color:#c56b4b;">
+            09:54 → 10:31
+        </div>
+        <div class="small">所要37分 / 乗り換えなし</div>
+    </div>
+
+    <p class="modal-muted">
+        ※土休日の検索結果。到着時刻に資料間の差があるため、
+        当日は駅の案内を優先してください。
+    </p>
+
+    <a href="https://www.kintetsu.co.jp/railway/Dia/pdf/260314/100501.pdf"
+       target="_blank" rel="noopener noreferrer"
+       class="btn btn-outline-secondary btn-sm w-100">
+        <i class="bi bi-box-arrow-up-right me-1"></i>
+        近鉄公式時刻表
+    </a>
+</div>
             </div>
         </div>
     </div>
 
     <!-- 般若寺方面 時刻表 -->
-    <div class="modal fade" id="hannyajiBusModal" tabindex="-1"
-         aria-labelledby="hannyajiBusTitle" aria-hidden="true">
+    <div class="modal fade"
+         id="hannyajiBusModal"
+         tabindex="-1"
+         aria-labelledby="hannyajiBusTitle"
+         aria-hidden="true">
+
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content travel-modal">
                 <div class="modal-header">
                     <h2 class="modal-title fs-5" id="hannyajiBusTitle">
-                        <i class="bi bi-clock"></i> 般若寺方面のバス
+                        <i class="bi bi-clock"></i>
+                        般若寺方面のバス
                     </h2>
-                    <button type="button" class="btn-close"
-                            data-bs-dismiss="modal" aria-label="閉じる"></button>
+                    <button type="button"
+                            class="btn-close"
+                            data-bs-dismiss="modal"
+                            aria-label="閉じる"></button>
                 </div>
-                <div class="modal-body">
-                    <p>近鉄奈良駅 → 般若寺方面</p>
-                    <p class="modal-muted">
-                        時刻表・系統・料金は確認後に追加。
-                    </p>
-                </div>
+
+
+<div class="modal-body">
+    <p class="modal-route">近鉄奈良駅 → 般若寺</p>
+
+    <p class="small mb-2">
+        <i class="bi bi-geo-alt"></i>
+        近鉄奈良駅 2番のりば
+    </p>
+
+    <div class="p-3 rounded-3 mb-3" style="background:#f8f1e9;">
+        <div class="small text-secondary mb-2">11時頃の到着を目指す候補</div>
+
+        <div class="d-flex justify-content-between mb-2">
+            <strong>10:40発</strong>
+            <span class="small">路線バス候補</span>
+        </div>
+
+        <div class="d-flex justify-content-between mb-2">
+            <strong>10:47発</strong>
+            <span class="small">路線バス候補</span>
+        </div>
+
+        <hr>
+
+        <div class="small text-secondary mb-1">
+            奈良監獄ミュージアム直通バス
+        </div>
+        <div class="fw-bold">11:00発 → 11:06 般若寺着</div>
+    </div>
+
+    <p class="modal-muted">
+        ※10:40・10:47は土曜時刻表の掲載便。
+        系統と運行状況を乗車前に確認。
+        11:00発は奈良交通公式の直通便です。
+    </p>
+
+    <a href="https://www.narakotsu.co.jp/news/general/30973/"
+       target="_blank" rel="noopener noreferrer"
+       class="btn btn-outline-secondary btn-sm w-100">
+        直通バス公式時刻表
+    </a>
+</div>
+
             </div>
         </div>
     </div>
 
     <!-- 般若寺方面 乗り場 -->
-    <div class="modal fade" id="hannyajiStopModal" tabindex="-1"
-         aria-labelledby="hannyajiStopTitle" aria-hidden="true">
+    <div class="modal fade"
+         id="hannyajiStopModal"
+         tabindex="-1"
+         aria-labelledby="hannyajiStopTitle"
+         aria-hidden="true">
+
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content travel-modal">
                 <div class="modal-header">
                     <h2 class="modal-title fs-5" id="hannyajiStopTitle">
-                        <i class="bi bi-geo-alt"></i> バス乗り場
+                        <i class="bi bi-geo-alt"></i>
+                        バス乗り場
                     </h2>
-                    <button type="button" class="btn-close"
-                            data-bs-dismiss="modal" aria-label="閉じる"></button>
+                    <button type="button"
+                            class="btn-close"
+                            data-bs-dismiss="modal"
+                            aria-label="閉じる"></button>
                 </div>
-                <div class="modal-body">
-                    <p>近鉄奈良駅の乗り場を確認して追加予定。</p>
-                    <p class="modal-muted">
-                        乗り場番号・案内図・写真などを掲載できるスペース。
-                    </p>
-                </div>
+
+
+<div class="modal-body">
+    <p class="modal-route">近鉄奈良駅 2番のりば</p>
+
+    <p>般若寺方面は、基本的に2番のりばから乗車。</p>
+
+    <p class="small text-secondary">
+        青山住宅行き・奈良監獄ミュージアム行きなど。
+        行き先と「般若寺」停車を確認してください。
+    </p>
+
+    <a href="https://www.narakotsu.co.jp/route/noriba/"
+       target="_blank" rel="noopener noreferrer"
+       class="btn btn-outline-secondary btn-sm w-100">
+        <i class="bi bi-geo-alt me-1"></i>
+        公式のりば案内
+    </a>
+</div>
+
             </div>
         </div>
     </div>
 
     <!-- 奈良公園方面 時刻表 -->
-    <div class="modal fade" id="parkBusModal" tabindex="-1"
-         aria-labelledby="parkBusTitle" aria-hidden="true">
+    <div class="modal fade"
+         id="parkBusModal"
+         tabindex="-1"
+         aria-labelledby="parkBusTitle"
+         aria-hidden="true">
+
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content travel-modal">
                 <div class="modal-header">
                     <h2 class="modal-title fs-5" id="parkBusTitle">
-                        <i class="bi bi-clock"></i> 奈良公園方面のバス
+                        <i class="bi bi-clock"></i>
+                        奈良公園方面のバス
                     </h2>
-                    <button type="button" class="btn-close"
-                            data-bs-dismiss="modal" aria-label="閉じる"></button>
+                    <button type="button"
+                            class="btn-close"
+                            data-bs-dismiss="modal"
+                            aria-label="閉じる"></button>
                 </div>
-                <div class="modal-body">
-                    <p>奈良監獄 → 奈良公園方面</p>
-                    <p class="modal-muted">
-                        バス利用を決めたら、系統・発車時刻・料金を追加。
-                    </p>
-                </div>
+
+
+<div class="modal-body">
+    <p class="modal-route">
+        奈良監獄ミュージアム → 奈良公園・東大寺
+    </p>
+
+    <div class="p-3 rounded-3 mb-3" style="background:#f8f1e9;">
+        <div class="small text-secondary mb-2">
+            直通バスで近鉄奈良駅へ戻る場合
+        </div>
+
+        <div class="fw-bold mb-2">
+            15:00 → 15:07
+        </div>
+
+        <div class="fw-bold">
+            16:15 → 16:22
+        </div>
+
+        <hr>
+
+        <p class="small mb-0">
+            近鉄奈良駅で奈良公園・東大寺方面のバスに乗り換え。
+            1番のりばが目安。
+        </p>
+    </div>
+
+    <p class="modal-muted">
+        ※直通バスは奈良公園へ直接向かいません。
+        15時の便に間に合わない場合は、
+        般若寺方面の一般路線バスや徒歩ルートも比較してください。
+    </p>
+
+    <a href="https://www.narakotsu.co.jp/news/general/30973/"
+       target="_blank" rel="noopener noreferrer"
+       class="btn btn-outline-secondary btn-sm w-100">
+        奈良交通公式時刻表
+    </a>
+</div>
+
             </div>
         </div>
     </div>
 
     <!-- 奈良公園方面 乗り場 -->
-    <div class="modal fade" id="parkStopModal" tabindex="-1"
-         aria-labelledby="parkStopTitle" aria-hidden="true">
+    <div class="modal fade"
+         id="parkStopModal"
+         tabindex="-1"
+         aria-labelledby="parkStopTitle"
+         aria-hidden="true">
+
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content travel-modal">
                 <div class="modal-header">
                     <h2 class="modal-title fs-5" id="parkStopTitle">
-                        <i class="bi bi-geo-alt"></i> バス乗り場
+                        <i class="bi bi-geo-alt"></i>
+                        バス乗り場
                     </h2>
-                    <button type="button" class="btn-close"
-                            data-bs-dismiss="modal" aria-label="閉じる"></button>
+                    <button type="button"
+                            class="btn-close"
+                            data-bs-dismiss="modal"
+                            aria-label="閉じる"></button>
                 </div>
-                <div class="modal-body">
-                    <p>乗車バス停・降車バス停は確認後に追加。</p>
-                    <p class="modal-muted">
-                        乗り場案内図やGoogleマップへのリンクを掲載予定。
-                    </p>
-                </div>
+
+
+<div class="modal-body">
+    <p class="modal-route">奈良公園・東大寺方面</p>
+
+    <p>
+        近鉄奈良駅から乗り換える場合は、
+        <strong>1番のりば</strong>の奈良公園・東大寺方面。
+    </p>
+
+    <p class="small text-secondary">
+        東大寺へ行くなら「東大寺大仏殿・春日大社前」などで下車。
+        監獄から直接向かう経路は、出発時に再検索してください。
+    </p>
+
+    <a href="https://www.narakotsu.co.jp/route/noriba/"
+       target="_blank" rel="noopener noreferrer"
+       class="btn btn-outline-secondary btn-sm w-100">
+        <i class="bi bi-geo-alt me-1"></i>
+        公式のりば案内
+    </a>
+</div>
+
             </div>
         </div>
     </div>
 
-<!-- 夕食メニューモーダル -->
-<div class="modal fade"
-     id="dinnerMenuModal"
-     tabindex="-1"
-     aria-labelledby="dinnerMenuTitle"
-     aria-hidden="true">
+    <!-- 夕食メニューモーダル -->
+    <div class="modal fade"
+         id="dinnerMenuModal"
+         tabindex="-1"
+         aria-labelledby="dinnerMenuTitle"
+         aria-hidden="true">
 
-    <div class="modal-dialog modal-dialog-centered modal-lg">
-        <div class="modal-content travel-modal dinner-menu-modal">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content travel-modal dinner-menu-modal">
 
-            <div class="modal-header">
-                <div>
-                    <span class="dinner-menu-label">DINNER / MENU</span>
-                    <h2 class="modal-title" id="dinnerMenuTitle">
-                        なら酒蔵なべ
-                    </h2>
+                <div class="modal-header">
+                    <div>
+                        <span class="dinner-menu-label">
+                            DINNER / MENU
+                        </span>
+
+                        <h2 class="modal-title" id="dinnerMenuTitle">
+                            なら酒蔵なべ
+                        </h2>
+                    </div>
+
+                    <button type="button"
+                            class="btn-close"
+                            data-bs-dismiss="modal"
+                            aria-label="閉じる"></button>
                 </div>
 
-                <button type="button"
-                        class="btn-close"
-                        data-bs-dismiss="modal"
-                        aria-label="閉じる"></button>
-            </div>
+                <div class="modal-body">
 
-            <div class="modal-body">
+                    <div class="dinner-recommend">
+                        <span class="dinner-recommend-label">
+                            RECOMMENDED
+                        </span>
 
-                <!-- おすすめ料理 -->
-                <div class="dinner-recommend">
-                    <span class="dinner-recommend-label">
-                        RECOMMENDED
-                    </span>
+                        <p class="dinner-recommend-text">
+                            <strong>酒粕玄人鍋</strong>が看板メニュー。
+                            奈良の酒粕と大和肉鶏のだしが特徴。
+                            締めはチーズ＋生パスタで
+                            カルボナーラ風にするのもおすすめ。
+                        </p>
 
-                    <p class="dinner-recommend-text">
-                        <strong>酒粕玄人鍋</strong>が看板メニュー。
-                        奈良の酒粕と大和肉鶏のだしが特徴。
-                        締めはチーズ＋生パスタで
-                        カルボナーラ風にするのもおすすめ。
-                    </p>
+                        <p class="dinner-recommend-other">
+                            ほかにも、牡蠣づくし酒粕鍋や
+                            大和牛の藁焼きなど。
+                        </p>
+                    </div>
 
-                    <p class="dinner-recommend-other">
-                        ほかにも、牡蠣づくし酒粕鍋や
-                        大和牛の藁焼きなど。
-                    </p>
-                </div>
+                    <!-- メニュー写真 -->
+                    <div id="dinnerMenuCarousel"
+                         class="carousel slide"
+                         data-bs-interval="false"
+                         data-bs-touch="true">
 
-                <!-- 写真切り替え -->
-                <div id="dinnerMenuCarousel"
-                     class="carousel slide"
-                     data-bs-interval="false"
-                     data-bs-touch="true">
+                        <div class="carousel-inner">
 
-                    <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="images/dinner-menu1.jpeg"
+                                     class="dinner-menu-image"
+                                     alt="鍋・メイン料理のメニュー">
+                            </div>
 
-                        <!-- 1枚目 -->
-                        <div class="carousel-item active">
-                            <img src="images/dinner-menu1.jpeg"
-                                 class="dinner-menu-image"
-                                 alt="酒粕鍋・メイン料理のメニュー">
+                            <div class="carousel-item">
+                                <img src="images/dinner-menu2.jpeg"
+                                     class="dinner-menu-image"
+                                     alt="一品料理のメニュー">
+                            </div>
+
                         </div>
 
-                        <!-- 2枚目 -->
-                        <div class="carousel-item">
-                            <img src="images/dinner-menu2.jpeg"
-                                 class="dinner-menu-image"
-                                 alt="一品料理・お酒のアテのメニュー">
-                        </div>
+                        <button class="dinner-carousel-arrow prev"
+                                type="button"
+                                data-bs-target="#dinnerMenuCarousel"
+                                data-bs-slide="prev"
+                                aria-label="前のメニュー">
+                            <i class="bi bi-chevron-left"></i>
+                        </button>
+
+                        <button class="dinner-carousel-arrow next"
+                                type="button"
+                                data-bs-target="#dinnerMenuCarousel"
+                                data-bs-slide="next"
+                                aria-label="次のメニュー">
+                            <i class="bi bi-chevron-right"></i>
+                        </button>
+                    </div>
+
+                    <!-- ページ切り替え -->
+                    <div class="dinner-menu-pagination">
+
+                        <button type="button"
+                                class="dinner-page-button active"
+                                data-bs-target="#dinnerMenuCarousel"
+                                data-bs-slide-to="0"
+                                aria-label="鍋・メイン料理">
+                            01 / 鍋・メイン
+                        </button>
+
+                        <button type="button"
+                                class="dinner-page-button"
+                                data-bs-target="#dinnerMenuCarousel"
+                                data-bs-slide-to="1"
+                                aria-label="一品料理">
+                            02 / 一品料理
+                        </button>
 
                     </div>
 
-                    <!-- 前へ -->
-                    <button class="dinner-carousel-arrow prev"
-                            type="button"
-                            data-bs-target="#dinnerMenuCarousel"
-                            data-bs-slide="prev"
-                            aria-label="前のメニュー">
-                        <i class="bi bi-chevron-left"></i>
-                    </button>
-
-                    <!-- 次へ -->
-                    <button class="dinner-carousel-arrow next"
-                            type="button"
-                            data-bs-target="#dinnerMenuCarousel"
-                            data-bs-slide="next"
-                            aria-label="次のメニュー">
-                        <i class="bi bi-chevron-right"></i>
-                    </button>
+                    <p class="dinner-menu-notice">
+                        ※ 写真・価格は撮影時点のものです。
+                    </p>
 
                 </div>
-
-                <!-- ページ切り替え -->
-                <div class="dinner-menu-pagination">
-                    <button type="button"
-                            class="dinner-page-button active"
-                            data-bs-target="#dinnerMenuCarousel"
-                            data-bs-slide-to="0"
-                            aria-label="鍋・メイン料理">
-                        01 / 鍋・メイン
-                    </button>
-
-                    <button type="button"
-                            class="dinner-page-button"
-                            data-bs-target="#dinnerMenuCarousel"
-                            data-bs-slide-to="1"
-                            aria-label="一品料理">
-                        02 / 一品料理
-                    </button>
-                </div>
-
-                <p class="dinner-menu-notice">
-                    ※ 写真・価格は撮影時点のものです。
-                </p>
-
             </div>
         </div>
     </div>
-</div>
 
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="js/script.js"></script>
+    <!-- スケジュール専用JS -->
+    <script src="js/schedule.js"></script>
+
 </body>
 </html>

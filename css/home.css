@@ -1,0 +1,114 @@
+
+/* メイン画像 */
+.hero img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+/* NEXTカード */
+
+/* NEXTカード */
+.next-card {
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #eadbd0;
+    border-left: 4px solid #c56b4b;
+    border-radius: 14px;
+    background: #fffdf9;
+}
+
+/* 右端の薄い写真 */
+.next-photo {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 45%;
+    height: 75%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0.15;
+    mask-image: linear-gradient(to right, transparent, black 70%);
+    pointer-events: none;
+}
+
+/* カード内の余白 */
+.next-content {
+    position: relative;
+    z-index: 1;
+    padding: 12px 14px;
+}
+
+/* 猫イラスト */
+.next-illustration {
+    width: 100%;
+    max-height: 65px;
+    object-fit: contain;
+}
+
+/* 予定情報 */
+.next-count {
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    color: #b18b7a;
+    margin-bottom: 3px !important;
+}
+
+.next-time {
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 1.1;
+    color: #c56b4b;
+}
+
+.next-description {
+    margin-top: 3px;
+    font-size: 11px;
+    line-height: 1.4;
+    color: #8b8079;
+}
+
+/* 下部の操作エリア */
+.next-bottom {
+    margin-top: 8px !important;
+    padding-top: 8px !important;
+    border-top: 1px solid #eadbd0;
+}
+.next-map {
+    font-size: 11px;
+    color: #b86b50;
+}
+
+/* 矢印 */
+.next-arrow {
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.next-prev {
+    border: 1px solid #eadbd0;
+    color: #b86b50;
+    background: white;
+}
+
+.next-forward {
+    color: white;
+    background: #c56b4b;
+}
+
+.next-forward:hover {
+    color: white;
+    background: #aa5538;
+}
+
+body,
+.home-page,
+.home-page main {
+    background-color: #f8f1e9;
+}
