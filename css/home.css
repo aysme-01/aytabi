@@ -1,25 +1,67 @@
 
-/* メイン画像 */
-.hero img {
-    width: 100%;
-    height: auto;
-    display: block;
+/* ========================================
+   AYtabi HOME - POP DESIGN
+======================================== */
+
+:root {
+    --ay-bg: #fff8ed;
+    --ay-white: #fffdf8;
+    --ay-orange: #ed7544;
+    --ay-orange-dark: #cf5b33;
+    --ay-yellow: #ffd06c;
+    --ay-brown: #513b30;
+    --ay-muted: #8f7c70;
+    --ay-border: #f2dccb;
 }
 
+/* ホーム全体 */
+body {
+    background: var(--ay-bg);
+}
 
-/* NEXTカード */
+main {
+    background: var(--ay-bg);
+}
+
+/* メインビジュアル */
+.hero {
+    position: relative;
+    overflow: hidden;
+    background: var(--ay-bg);
+}
+
+.hero picture,
+.hero img {
+    display: block;
+    width: 100%;
+}
+
+.hero img {
+    height: auto;
+}
+
+/* 写真の下に柔らかいアクセント */
+.hero::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: var(--ay-yellow);
+}
 
 /* NEXTカード */
 .next-card {
     position: relative;
     overflow: hidden;
-    border: 1px solid #eadbd0;
-    border-left: 4px solid #c56b4b;
-    border-radius: 14px;
-    background: #fffdf9;
+    border: 2px solid var(--ay-border);
+    border-radius: 20px;
+    background: var(--ay-white);
+    box-shadow: 0 5px 0 #f2e3d4 !important;
 }
 
-/* 右端の薄い写真 */
+/* 背景写真 */
 .next-photo {
     position: absolute;
     top: 0;
@@ -28,87 +70,374 @@
     height: 75%;
     background-size: cover;
     background-position: center;
-    opacity: 0.15;
-    mask-image: linear-gradient(to right, transparent, black 70%);
+    opacity: 0.08;
+    mask-image: linear-gradient(
+        to right,
+        transparent,
+        black 75%
+    );
     pointer-events: none;
 }
 
-/* カード内の余白 */
+/* カード内 */
 .next-content {
     position: relative;
     z-index: 1;
-    padding: 12px 14px;
+    padding: 16px 16px 12px;
 }
 
 /* 猫イラスト */
 .next-illustration {
+    display: block;
     width: 100%;
-    max-height: 65px;
+    max-height: 90px;
     object-fit: contain;
 }
 
-/* 予定情報 */
+/* カウント */
 .next-count {
-    font-size: 10px;
-    letter-spacing: 0.1em;
-    color: #b18b7a;
-    margin-bottom: 3px !important;
-}
-
-.next-time {
-    font-size: 25px;
+    display: inline-block;
+    margin-bottom: 5px !important;
+    padding: 3px 9px;
+    border-radius: 30px;
+    background: #fff0d8;
+    color: var(--ay-orange-dark);
+    font-size: 11px;
     font-weight: 700;
-    line-height: 1.1;
-    color: #c56b4b;
+    letter-spacing: 0.08em;
 }
 
-.next-description {
-    margin-top: 3px;
-    font-size: 11px;
+/* 時刻 */
+.next-time {
+    color: var(--ay-orange);
+    font-size: clamp(28px, 7vw, 36px);
+    font-weight: 800;
+    line-height: 1.15;
+    letter-spacing: -0.03em;
+}
+
+/* 予定名 */
+#nextTitle {
+    color: var(--ay-brown);
+    font-size: clamp(14px, 3.7vw, 18px);
     line-height: 1.4;
-    color: #8b8079;
 }
 
-/* 下部の操作エリア */
-.next-bottom {
-    margin-top: 8px !important;
-    padding-top: 8px !important;
-    border-top: 1px solid #eadbd0;
+/* 説明 */
+.next-description {
+    margin-top: 5px;
+    color: var(--ay-muted);
+    font-size: 12px;
+    line-height: 1.5;
 }
+
+/* 下部操作エリア */
+.next-bottom {
+    margin-top: 13px !important;
+    padding-top: 12px !important;
+    border-top: 1px dashed #e9cbb6;
+}
+
+/* 地図リンク */
 .next-map {
-    font-size: 11px;
-    color: #b86b50;
+    color: var(--ay-orange-dark);
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.next-map:hover {
+    color: var(--ay-orange);
 }
 
 /* 矢印 */
 .next-arrow {
-    width: 30px;
-    height: 30px;
-    padding: 0;
-    border-radius: 50%;
     display: inline-flex;
     align-items: center;
     justify-content: center;
+    width: 34px;
+    height: 34px;
+    padding: 0;
+    border-radius: 50%;
+    font-size: 15px;
+    transition: transform 0.15s ease,
+                background 0.15s ease;
+}
+
+.next-arrow:active {
+    transform: scale(0.94);
 }
 
 .next-prev {
-    border: 1px solid #eadbd0;
-    color: #b86b50;
+    border: 1px solid var(--ay-border);
     background: white;
+    color: var(--ay-orange-dark);
 }
 
 .next-forward {
+    border: none;
+    background: var(--ay-orange);
     color: white;
-    background: #c56b4b;
 }
 
 .next-forward:hover {
+    background: var(--ay-orange-dark);
     color: white;
-    background: #aa5538;
 }
 
+/* スマホ調整 */
+@media (max-width: 375px) {
+    .next-content {
+        padding: 13px 12px 11px;
+    }
+
+    .next-illustration {
+        max-height: 75px;
+    }
+
+    .next-description {
+        font-size: 11px;
+    }
+}
+
+/* 少し落ち着いたコーラル系に変更 */
+:root {
+    --ay-bg: #f8f5f4;
+    --ay-white: #fffdfd;
+    --ay-orange: #c87565;
+    --ay-orange-dark: #ad6256;
+    --ay-yellow: #e9c8bf;
+    --ay-brown: #493e3c;
+    --ay-muted: #8e8080;
+    --ay-border: #eadbd8;
+}
+
+/* NEXT：左側の猫と縦書き */
+.next-visual {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100px;
+}
+
+.next-vertical {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 0.2em;
+    color: var(--ay-orange);
+}
+
+.next-illustration {
+    width: 85%;
+    max-height: 90px;
+    margin-left: 12px;
+    object-fit: contain;
+}
+
+/* 右上のカウント */
+.next-details {
+    position: relative;
+    padding-top: 16px;
+}
+
+.next-count {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0 !important;
+    padding: 0;
+    background: transparent;
+    color: #ad8b7b;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+}
+
+/* NEXTカードの色 */
+.next-card {
+    background: var(--ay-white);
+    border-color: var(--ay-border);
+    box-shadow: 0 4px 0 #efe2d6 !important;
+}
+
+/* 黄色ラインを控えめに */
+.hero::after {
+    background: var(--ay-yellow);
+    height: 3px;
+}
+
+/* NEXTカードの配置調整 */
+.next-card .row {
+    min-height: 105px;
+}
+
+/* 左：縦書き＋猫 */
+.next-visual {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 105px;
+    padding-left: 20px;
+}
+
+.next-vertical {
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    font-size: 10px;
+    letter-spacing: 0.1em;
+}
+
+.next-illustration {
+    width: 100%;
+    max-height: 82px;
+    margin-left: 0;
+}
+
+/* 右：予定情報 */
+.next-details {
+    position: relative;
+    padding-top: 8px;
+    padding-left: 4px;
+    padding-right: 4px;
+}
+
+/* カウントはカード全体の右上へ */
+.next-count {
+    position: absolute;
+    top: -12px;
+    right: 0;
+    font-size: 10px;
+}
+
+/* 時刻 */
+.next-time {
+    font-size: 29px;
+    line-height: 1.1;
+}
+
+/* カードの色 */
+.next-card {
+    border-color: var(--ay-border);
+    background: var(--ay-white);
+}
+
+/* 写真下のラインも黄色から変更 */
+.hero::after {
+    background: #e9c8bf;
+    height: 2px;
+}
+
+
+/* NEXTカード：余白を詰める */
+.next-content {
+    padding: 10px 14px 10px;
+}
+
+/* 上段をコンパクトに */
+.next-card .row {
+    min-height: 90px;
+}
+
+/* 猫の表示領域 */
+.next-visual {
+    min-height: 90px;
+    padding-left: 0;
+    padding-right: 5px;
+    justify-content: center;
+}
+
+/* 縦書きNEXTは非表示 */
+.next-vertical {
+    display: none;
+}
+
+/* 猫を大きく */
+.next-illustration {
+    width: 115%;
+    max-width: none;
+    max-height: 115px;
+    margin: 0;
+    object-fit: contain;
+}
+
+/* 予定情報を猫に近づける */
+.next-details {
+    padding: 5px 0 0 0;
+}
+
+/* カウントを右上に */
+.next-count {
+    top: -3px;
+    right: 0;
+}
+
+/* 説明文 */
+.next-description {
+    margin-top: 3px;
+}
+
+/* 下部との間隔を縮める */
+.next-bottom {
+    margin-top: 7px !important;
+    padding-top: 9px !important;
+}
+
+/* ボタンは少しだけ小さく */
+.next-arrow {
+    width: 32px;
+    height: 32px;
+}
+
+
+/* ホームの黄色味をなくす */
+:root {
+    --ay-bg: #f8f5f5;
+    --ay-white: #fffdfd;
+    --ay-orange: #c87565;
+    --ay-orange-dark: #ad6256;
+    --ay-brown: #493e3c;
+    --ay-muted: #8e8080;
+    --ay-border: #e9dddd;
+}
+
+/* ページ全体 */
 body,
 .home-page,
-.home-page main {
-    background-color: #f8f1e9;
+.home-page main,
+main {
+    background-color: #f8f5f5;
+}
+
+/* ヘッダー */
+.site-header {
+    background: #f8f5f5;
+    border-bottom-color: #e9dddd;
+}
+
+/* チケットボタン */
+.ticket-link {
+    background: #fffdfd;
+    border-color: #e9dddd;
+    color: #b96c5c;
+}
+
+/* NEXTカード */
+.next-card {
+    background: #fffdfd;
+    border-color: #e9dddd;
+    box-shadow: 0 4px 0 #eee5e5 !important;
+}
+
+/* 写真下の黄色いラインを削除 */
+.hero::after {
+    display: none;
 }

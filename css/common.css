@@ -1,5 +1,143 @@
 
-/* 固定フッター */
+@import url('https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;600;700;800&display=swap');
+
+body {
+    font-family: 'Zen Maru Gothic', sans-serif;
+    font-weight: 500;
+}
+
+
+
+/* ========================================
+   AYtabi COMMON CSS
+======================================== */
+
+:root {
+    --ay-bg: #f8f5f5;
+    --ay-white: #fffdfd;
+    --ay-main: #c87565;
+    --ay-main-dark: #ad6256;
+    --ay-text: #493e3c;
+    --ay-muted: #8e8080;
+    --ay-border: #e9dddd;
+}
+
+/* ========================================
+   全体
+======================================== */
+
+body {
+    background-color: var(--ay-bg);
+    color: var(--ay-text);
+    padding-bottom: calc(75px + env(safe-area-inset-bottom));
+}
+
+/* ========================================
+   ヘッダー
+======================================== */
+
+
+/* ========================================
+   AYtabi ヘッダー
+======================================== */
+
+.site-header {
+    padding: 10px 0;
+    background: #f8f5f5;
+    border-bottom: 1px solid #e9dddd;
+}
+
+.header-inner {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+/* ロゴ */
+.site-logo {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    width: 100px;
+    text-decoration: none;
+}
+
+.site-logo img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+/* チケット2つを均等幅に */
+.header-tickets {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 7px;
+    flex: 1;
+    min-width: 0;
+}
+
+.header-tickets .ticket-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+
+    width: 100%;
+    min-width: 0;
+    height: 40px;
+    padding: 6px 5px;
+
+    background: #c87565;
+    border: 1px solid #c87565;
+    border-radius: 10px;
+
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: 700;
+    white-space: nowrap;
+    text-decoration: none;
+
+    transition: background 0.2s ease;
+}
+
+.header-tickets .ticket-link:hover {
+    background: #ad6256;
+    border-color: #ad6256;
+    color: #ffffff;
+}
+
+.header-tickets .ticket-link i {
+    font-size: 15px;
+}
+
+/* 小さめのスマホ */
+@media (max-width: 390px) {
+    .header-inner {
+        gap: 8px;
+    }
+
+    .site-logo {
+        width: 82px;
+    }
+
+    .header-tickets {
+        gap: 5px;
+    }
+
+    .header-tickets .ticket-link {
+        height: 38px;
+        font-size: 11px;
+        gap: 4px;
+    }
+}
+
+
+/* ========================================
+   固定フッター
+======================================== */
+
 #footer .navbar {
     padding: 4px 0 !important;
     min-height: 0;
@@ -7,7 +145,7 @@
 
 #footer .nav-link {
     padding: 0 !important;
-    color: #857166;
+    color: #857b79;
     line-height: 1.1;
 }
 
@@ -22,55 +160,130 @@
 }
 
 #footer .nav-link.active {
-    color: #bf6845;
+    color: var(--ay-main);
     font-weight: bold;
 }
 
-/* 固定フッター分の余白 */
-body {
-    padding-bottom: calc(75px + env(safe-area-inset-bottom));
-}
+/* ========================================
+   レスポンシブ
+======================================== */
 
-
-/* 共通ヘッダー */
-.site-header {
-    background: #f8f1e9;
-    border-bottom: 1px solid #eadbd0;
-}
-
-/* チケットリンク */
-.ticket-link {
-    min-height: 42px;
-    padding: 8px 10px;
-    background: #fffdf9;
-    border: 1px solid #eadbd0;
-    border-radius: 12px;
-    color: #b86b50;
-    font-size: 12px;
-    font-weight: 600;
-    white-space: nowrap;
-    transition: background 0.2s;
-}
-
-.ticket-link:hover {
-    background: #f3e5d9;
-    color: #a65338;
-}
-
-.ticket-link > .bi:first-child {
-    font-size: 16px;
-}
-
-.ticket-external {
-    font-size: 10px;
-}
-
-/* スマホ */
-@media (max-width: 375px) {
-    .ticket-link {
-        padding: 8px 5px;
-        font-size: 11px;
-        gap: 5px !important;
+@media (max-width: 390px) {
+    .header-inner {
+        gap: 7px;
     }
+
+    .site-logo {
+        font-size: 21px;
+    }
+
+    .header-tickets {
+        gap: 5px;
+    }
+
+    .header-tickets .ticket-link {
+        padding: 8px 7px;
+        font-size: 10px;
+        gap: 4px;
+    }
+}
+
+
+/* ========================================
+   チケットボタン：チケット風デザイン
+======================================== */
+
+.header-tickets .ticket-link {
+    position: relative;
+    overflow: hidden;
+
+    height: 42px;
+    padding: 6px 8px;
+    gap: 6px;
+
+    background: #c87565;
+    border: 1px solid #c87565;
+    border-radius: 9px;
+
+    color: #fff;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+
+    box-shadow: 0 2px 0 #e5c9c5;
+}
+
+/* チケットの切り欠き */
+.header-tickets .ticket-link::before,
+.header-tickets .ticket-link::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: #f8f5f5;
+    transform: translateX(-50%);
+}
+
+.header-tickets .ticket-link::before {
+    top: -5px;
+}
+
+.header-tickets .ticket-link::after {
+    bottom: -5px;
+}
+
+/* 中央のミシン目 */
+.header-tickets .ticket-link span {
+    display: inline-flex;
+    align-items: center;
+    min-height: 22px;
+}
+
+.header-tickets .ticket-link i {
+    font-size: 17px;
+}
+
+/* 押した時 */
+.header-tickets .ticket-link:active {
+    transform: translateY(1px);
+    box-shadow: 0 1px 0 #e5c9c5;
+}
+
+@media (max-width: 390px) {
+    .header-tickets .ticket-link {
+        height: 40px;
+        padding: 5px;
+        gap: 4px;
+        font-size: 11px;
+    }
+
+    .header-tickets .ticket-link i {
+        font-size: 15px;
+    }
+}
+
+
+/* チケットボタン：淡い枠線タイプ */
+.header-tickets .ticket-link {
+    background: #fff7f5;
+    border: 1.5px solid #d7a49b;
+    color: #b96b5d;
+    box-shadow: none;
+    border-radius: 12px;
+    font-weight: 700;
+}
+
+/* 前のチケット風切り欠きを削除 */
+.header-tickets .ticket-link::before,
+.header-tickets .ticket-link::after {
+    display: none;
+}
+
+.header-tickets .ticket-link:hover {
+    background: #fbece9;
+    border-color: #c87565;
+    color: #ad6256;
 }
 

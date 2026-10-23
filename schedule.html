@@ -34,15 +34,17 @@
     <main class="schedule-container">
 
         <!-- ページタイトル -->
-        <section class="schedule-intro">
-            <div class="schedule-eyebrow">
-                <span>AYtabi / ITINERARY</span>
-                <span>24 OCT 2026</span>
-            </div>
 
-            <h1>旅のスケジュール。</h1>
-            <p>秋の奈良をめぐる、ふたりの一日。</p>
-        </section>
+<section class="schedule-intro">
+    <div class="schedule-date">
+        <span>2026.10.24</span>
+        <span>SATURDAY</span>
+    </div>
+
+    <h1>旅のスケジュール</h1>
+
+</section>
+
 
         <!-- タイムライン -->
         <section class="trip-timeline" aria-label="旅行スケジュール">
@@ -79,18 +81,20 @@
                 </div>
 
                 <div class="transfer-body">
-                    <div class="transfer-heading">
-                        <strong>近鉄電車</strong>
-                        <span class="transfer-duration">約37分（仮）</span>
-                    </div>
 
-                    <p class="transfer-route">
-                        大阪難波駅 → 近鉄奈良駅
-                    </p>
+<div class="transfer-heading">
+    <strong>近鉄電車（快速急行）</strong>
+    <span class="transfer-duration">36分</span>
+</div>
 
-                    <p class="transfer-note">
-                        09:54発 → 10:31着（時刻は要確認）
-                    </p>
+<p class="transfer-route">
+    大阪難波駅 → 近鉄奈良駅
+</p>
+
+<p class="transfer-note">
+    09:54発 → 10:30着 ／ 1・2番ホーム
+</p>
+
 
                     <div class="transfer-actions">
                         <button type="button"
@@ -119,7 +123,7 @@
                 </div>
 
                 <div class="timeline-spot-body">
-                    <span class="timeline-time">10:31</span>
+                    <span class="timeline-time">10:30</span>
                     <span class="timeline-chapter">02 / ARRIVAL</span>
 
                     <h2>近鉄奈良駅 到着</h2>
@@ -136,18 +140,20 @@
                 </div>
 
                 <div class="transfer-body">
-                    <div class="transfer-heading">
-                        <strong>路線バス＋徒歩</strong>
-                        <span class="transfer-duration">所要時間 確認中</span>
-                    </div>
 
-                    <p class="transfer-route">
-                        近鉄奈良駅 → 般若寺
-                    </p>
+<div class="transfer-heading">
+    <strong>奈良交通バス（118系統）</strong>
+    <span class="transfer-duration">約6分</span>
+</div>
 
-                    <p class="transfer-note">
-                        系統・乗り場・運賃は確認後に記載
-                    </p>
+<p class="transfer-route">
+    近鉄奈良駅 → 般若寺
+</p>
+
+<p class="transfer-note">
+    10:47発 → 10:53着 ／ 2番のりば・青山住宅行き
+</p>
+
 
                     <div class="transfer-actions">
                         <button type="button"
@@ -220,18 +226,20 @@
                 </div>
 
                 <div class="transfer-body">
-                    <div class="transfer-heading">
-                        <strong>徒歩</strong>
-                        <span class="transfer-duration">約15分（仮）</span>
-                    </div>
 
-                    <p class="transfer-route">
-                        般若寺 → 奈良監獄ミュージアム
-                    </p>
+<div class="transfer-heading">
+    <strong>徒歩</strong>
+    <span class="transfer-duration">約10分</span>
+</div>
 
-                    <p class="transfer-note">
-                        12:00頃出発。徒歩時間は要確認。
-                    </p>
+<p class="transfer-route">
+    般若寺 → 旧奈良監獄
+</p>
+
+<p class="transfer-note">
+    12:00頃出発 → 12:10頃到着
+</p>
+
 
                     <div class="transfer-actions">
                         <a class="transfer-action"
@@ -290,7 +298,7 @@
                 <div class="transfer-body">
                     <div class="transfer-heading">
                         <strong>奈良公園へ移動</strong>
-                        <span class="transfer-duration">所要時間 確認中</span>
+                        <span class="transfer-duration">約30分</span>
                     </div>
 
                     <p class="transfer-route">
@@ -375,25 +383,51 @@
                 </div>
             </article>
 
-            <!-- 移動 05 -->
-            <div class="timeline-transfer">
-                <div class="transfer-track">
-                    <span class="transfer-icon">
-                        <i class="bi bi-signpost"></i>
-                    </span>
-                </div>
 
-                <div class="transfer-body">
-                    <div class="transfer-heading">
-                        <strong>夕食のお店へ</strong>
-                        <span class="transfer-duration">17:00頃 出発</span>
-                    </div>
+<!-- 移動 05 -->
+<div class="timeline-transfer">
+    <div class="transfer-track">
+        <span class="transfer-icon">
+            <i class="bi bi-signpost-split"></i>
+        </span>
+    </div>
 
-                    <p class="transfer-note">
-                        お店が決まったら、経路・所要時間・運賃を追加。
-                    </p>
-                </div>
-            </div>
+    <div class="transfer-body">
+        <div class="transfer-heading">
+            <strong>夕食のお店へ</strong>
+            <span class="transfer-duration">17:00頃 出発</span>
+        </div>
+
+        <p class="transfer-route">
+            奈良公園・東大寺周辺 → なら酒蔵なべ
+        </p>
+
+        <p class="transfer-note">
+            徒歩または路線バスで移動。
+            バス利用なら「田中町」下車が候補。
+            18:00の夕食に合わせて向かう。
+        </p>
+
+        <div class="transfer-actions">
+            <a class="transfer-action"
+               href="https://www.google.com/maps/dir/?api=1&amp;destination=奈良県奈良市今御門町34-1&amp;travelmode=transit"
+               target="_blank"
+               rel="noopener noreferrer">
+                <i class="bi bi-bus-front"></i>
+                現在地からバス経路
+            </a>
+
+            <a class="transfer-action"
+               href="https://www.google.com/maps/dir/?api=1&amp;destination=奈良県奈良市今御門町34-1&amp;travelmode=walking"
+               target="_blank"
+               rel="noopener noreferrer">
+                <i class="bi bi-person-walking"></i>
+                現在地から徒歩経路
+            </a>
+        </div>
+    </div>
+</div>
+
 
             <!-- 06 夕食 -->
             <article class="timeline-spot" id="schedule-06">
@@ -451,29 +485,62 @@
                             aria-label="閉じる"></button>
                 </div>
 
-<div class="modal-body">
-    <p class="modal-route">大阪難波駅 → 近鉄奈良駅</p>
 
-    <div class="p-3 rounded-3 mb-3" style="background:#f8f1e9;">
-        <div class="small text-secondary mb-1">予定の電車 / 快速急行</div>
-        <div class="fs-4 fw-bold" style="color:#c56b4b;">
-            09:54 → 10:31
+<div class="modal-body">
+
+    <p class="modal-route">
+        大阪難波駅 → 近鉄奈良駅
+    </p>
+
+    <p class="small text-secondary mb-3">
+        10月24日（土）／乗り換えなし
+    </p>
+
+    <div class="train-options">
+
+        <!-- 一本前 -->
+        <div class="train-option">
+            <span class="train-option-label">一本前</span>
+            <div class="train-option-time">
+                09:41 <i class="bi bi-arrow-right"></i> 10:20
+            </div>
+            <p>急行 ／ 39分</p>
         </div>
-        <div class="small">所要37分 / 乗り換えなし</div>
+
+        <!-- 本命 -->
+        <div class="train-option recommended">
+            <span class="train-option-label">乗車予定</span>
+            <div class="train-option-time">
+                09:54 <i class="bi bi-arrow-right"></i> 10:30
+            </div>
+            <p>快速急行 ／ 36分 ／ 1・2番ホーム</p>
+        </div>
+
+        <!-- 一本後 -->
+        <div class="train-option">
+            <span class="train-option-label">一本後</span>
+            <div class="train-option-time">
+                10:02 <i class="bi bi-arrow-right"></i> 10:42
+            </div>
+            <p>急行 ／ 40分</p>
+        </div>
+
     </div>
 
-    <p class="modal-muted">
-        ※土休日の検索結果。到着時刻に資料間の差があるため、
-        当日は駅の案内を優先してください。
+    <p class="modal-muted mt-3">
+        ※当日は駅の案内・運行情報を優先してください。
     </p>
 
     <a href="https://www.kintetsu.co.jp/railway/Dia/pdf/260314/100501.pdf"
-       target="_blank" rel="noopener noreferrer"
+       target="_blank"
+       rel="noopener noreferrer"
        class="btn btn-outline-secondary btn-sm w-100">
         <i class="bi bi-box-arrow-up-right me-1"></i>
         近鉄公式時刻表
     </a>
+
 </div>
+
             </div>
         </div>
     </div>
@@ -566,137 +633,262 @@
                 </div>
 
 
-<div class="modal-body">
-    <p class="modal-route">近鉄奈良駅 2番のりば</p>
-
-    <p>般若寺方面は、基本的に2番のりばから乗車。</p>
-
-    <p class="small text-secondary">
-        青山住宅行き・奈良監獄ミュージアム行きなど。
-        行き先と「般若寺」停車を確認してください。
-    </p>
-
-    <a href="https://www.narakotsu.co.jp/route/noriba/"
-       target="_blank" rel="noopener noreferrer"
-       class="btn btn-outline-secondary btn-sm w-100">
-        <i class="bi bi-geo-alt me-1"></i>
-        公式のりば案内
-    </a>
-</div>
-
-            </div>
-        </div>
-    </div>
-
-    <!-- 奈良公園方面 時刻表 -->
-    <div class="modal fade"
-         id="parkBusModal"
-         tabindex="-1"
-         aria-labelledby="parkBusTitle"
-         aria-hidden="true">
-
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content travel-modal">
-                <div class="modal-header">
-                    <h2 class="modal-title fs-5" id="parkBusTitle">
-                        <i class="bi bi-clock"></i>
-                        奈良公園方面のバス
-                    </h2>
-                    <button type="button"
-                            class="btn-close"
-                            data-bs-dismiss="modal"
-                            aria-label="閉じる"></button>
-                </div>
-
 
 <div class="modal-body">
+
     <p class="modal-route">
-        奈良監獄ミュージアム → 奈良公園・東大寺
+        近鉄奈良駅 → 般若寺
     </p>
 
-    <div class="p-3 rounded-3 mb-3" style="background:#f8f1e9;">
-        <div class="small text-secondary mb-2">
-            直通バスで近鉄奈良駅へ戻る場合
-        </div>
-
-        <div class="fw-bold mb-2">
-            15:00 → 15:07
-        </div>
-
-        <div class="fw-bold">
-            16:15 → 16:22
-        </div>
-
-        <hr>
-
-        <p class="small mb-0">
-            近鉄奈良駅で奈良公園・東大寺方面のバスに乗り換え。
-            1番のりばが目安。
-        </p>
-    </div>
-
-    <p class="modal-muted">
-        ※直通バスは奈良公園へ直接向かいません。
-        15時の便に間に合わない場合は、
-        般若寺方面の一般路線バスや徒歩ルートも比較してください。
+    <p class="small text-secondary mb-3">
+        10月24日（土）／奈良交通 118系統・青山住宅行き
     </p>
 
-    <a href="https://www.narakotsu.co.jp/news/general/30973/"
-       target="_blank" rel="noopener noreferrer"
-       class="btn btn-outline-secondary btn-sm w-100">
-        奈良交通公式時刻表
-    </a>
-</div>
+    <div class="train-options">
 
+        <div class="train-option">
+            <span class="train-option-label">一本前</span>
+            <div class="train-option-time">
+                10:27 <i class="bi bi-arrow-right"></i> 10:33
             </div>
+            <p>所要6分 ／ 電車が早く着いた場合の候補</p>
         </div>
+
+        <div class="train-option recommended">
+            <span class="train-option-label">乗車予定</span>
+            <div class="train-option-time">
+                10:47 <i class="bi bi-arrow-right"></i> 10:53
+            </div>
+            <p>所要6分 ／ 近鉄奈良駅 2番のりば</p>
+        </div>
+
+        <div class="train-option">
+            <span class="train-option-label">一本後</span>
+            <div class="train-option-time">
+                11:07 <i class="bi bi-arrow-right"></i> 11:13
+            </div>
+            <p>所要6分 ／ 乗り遅れた場合の候補</p>
+        </div>
+
     </div>
 
-    <!-- 奈良公園方面 乗り場 -->
-    <div class="modal fade"
-         id="parkStopModal"
-         tabindex="-1"
-         aria-labelledby="parkStopTitle"
-         aria-hidden="true">
-
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content travel-modal">
-                <div class="modal-header">
-                    <h2 class="modal-title fs-5" id="parkStopTitle">
-                        <i class="bi bi-geo-alt"></i>
-                        バス乗り場
-                    </h2>
-                    <button type="button"
-                            class="btn-close"
-                            data-bs-dismiss="modal"
-                            aria-label="閉じる"></button>
-                </div>
-
-
-<div class="modal-body">
-    <p class="modal-route">奈良公園・東大寺方面</p>
-
-    <p>
-        近鉄奈良駅から乗り換える場合は、
-        <strong>1番のりば</strong>の奈良公園・東大寺方面。
+    <p class="modal-muted mt-3">
+        降車は「般若寺」バス停。東之阪町の次です。
     </p>
 
-    <p class="small text-secondary">
-        東大寺へ行くなら「東大寺大仏殿・春日大社前」などで下車。
-        監獄から直接向かう経路は、出発時に再検索してください。
-    </p>
+    <a href="https://navi.narakotsu.co.jp/pdf/gene19/00037_020_ja.pdf"
+       target="_blank"
+       rel="noopener noreferrer"
+       class="btn btn-outline-secondary btn-sm w-100 mb-2">
+        <i class="bi bi-file-earmark-pdf me-1"></i>
+        奈良交通 公式時刻表
+    </a>
 
     <a href="https://www.narakotsu.co.jp/route/noriba/"
-       target="_blank" rel="noopener noreferrer"
+       target="_blank"
+       rel="noopener noreferrer"
        class="btn btn-outline-secondary btn-sm w-100">
         <i class="bi bi-geo-alt me-1"></i>
         公式のりば案内
     </a>
+
 </div>
+
 
             </div>
         </div>
     </div>
+
+    <!-- 監獄 → 東大寺方面 バス時刻表 -->
+<div class="modal fade"
+     id="parkBusModal"
+     tabindex="-1"
+     aria-labelledby="parkBusTitle"
+     aria-hidden="true">
+
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content travel-modal">
+
+            <div class="modal-header">
+                <h2 class="modal-title fs-5" id="parkBusTitle">
+                    <i class="bi bi-bus-front"></i>
+                    バス時刻表
+                </h2>
+                <button type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal"
+                        aria-label="閉じる"></button>
+            </div>
+
+            <div class="modal-body">
+
+                <p class="modal-route">
+                    般若寺 → 押上町
+                </p>
+
+                <p class="small text-secondary mb-3">
+                    10月24日（土）／奈良交通バス・奈良駅方面
+                </p>
+
+                <div class="train-options">
+
+                    <div class="train-option">
+                        <span class="train-option-label">14時台</span>
+                        <div class="train-option-time">
+                            14:00 <small>118</small>　
+                            14:20 <small>118</small><br>
+                            14:28 <small>153</small>　
+                            14:40 <small>118</small>
+                        </div>
+                    </div>
+
+                    <div class="train-option recommended">
+                        <span class="train-option-label">
+                            15時台・乗車目安
+                        </span>
+                        <div class="train-option-time">
+                            15:00 <small>118</small>　
+                            15:20 <small>118</small><br>
+                            15:28 <small>153</small>　
+                            15:40 <small>118</small>
+                        </div>
+                    </div>
+
+                    <div class="train-option">
+                        <span class="train-option-label">16時台</span>
+                        <div class="train-option-time">
+                            16:00 <small>118</small>　
+                            16:20 <small>118</small>　
+                            16:40 <small>118</small>
+                        </div>
+                    </div>
+
+                </div>
+
+                <p class="modal-muted mt-3">
+                    数字は系統番号。押上町までの乗車時間は約5分。
+                    発車時刻は「般若寺」バス停のものです。
+                </p>
+
+                <div class="mt-3">
+                    <p class="fw-bold small mb-2">
+                        <i class="bi bi-person-walking me-1"></i>
+                        徒歩の目安
+                    </p>
+
+                    <p class="small mb-1">
+                        監獄ミュージアム → 般若寺バス停：約5〜10分
+                    </p>
+
+                    <p class="small mb-1">
+                        押上町バス停 → ゐざさ夢風ひろば店：約10〜15分
+                    </p>
+                </div>
+
+                <p class="modal-muted mt-3">
+                    ※監獄の見学終了時間に合わせて乗車。
+                    バス停には余裕を持って向かってください。
+                </p>
+
+                <a href="https://ekitan.com/timetable/route-bus/company/5132/1013723/1002372/d1?dw=1"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="btn btn-outline-secondary btn-sm w-100">
+                    <i class="bi bi-box-arrow-up-right me-1"></i>
+                    駅探で時刻表を見る
+                </a>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- 監獄 → 東大寺方面 バス乗り場 -->
+<div class="modal fade"
+     id="parkStopModal"
+     tabindex="-1"
+     aria-labelledby="parkStopTitle"
+     aria-hidden="true">
+
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content travel-modal">
+
+            <div class="modal-header">
+                <h2 class="modal-title fs-5" id="parkStopTitle">
+                    <i class="bi bi-geo-alt"></i>
+                    バス乗り場
+                </h2>
+                <button type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal"
+                        aria-label="閉じる"></button>
+            </div>
+
+            <div class="modal-body">
+
+                <p class="modal-route">
+                    監獄ミュージアム → 般若寺バス停
+                </p>
+
+                <p class="small mb-3">
+                    監獄ミュージアムから徒歩約5〜10分。
+                    <strong>奈良駅方面行き</strong>のバスに乗車します。
+                </p>
+
+                <div class="p-3 rounded-3 mb-3"
+                     style="background:#f8f1e9;">
+
+                    <p class="fw-bold mb-2">
+                        <i class="bi bi-bus-front me-1"></i>
+                        乗車するバス
+                    </p>
+
+                    <p class="small mb-1">
+                        乗車：般若寺
+                    </p>
+
+                    <p class="small mb-1">
+                        系統：118 または 153
+                    </p>
+
+                    <p class="small mb-1">
+                        方面：奈良駅方面
+                    </p>
+
+                    <p class="small mb-0">
+                        降車：押上町
+                    </p>
+
+                </div>
+
+                <p class="small text-secondary mb-3">
+                    押上町で降りたら、徒歩約10〜15分で
+                    ゐざさ夢風ひろば店へ。
+                    東之阪町から乗る場合は発車時刻が異なります。
+                </p>
+
+                <a href="https://www.google.com/maps/dir/?api=1&amp;origin=奈良監獄ミュージアム&amp;destination=般若寺バス停&amp;travelmode=walking"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="btn btn-outline-secondary btn-sm w-100 mb-2">
+                    <i class="bi bi-map me-1"></i>
+                    監獄からバス停までの徒歩ルート
+                </a>
+
+                <a href="https://www.google.com/maps/dir/?api=1&amp;origin=押上町バス停&amp;destination=ゐざさ東大寺門前夢風ひろば店&amp;travelmode=walking"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="btn btn-outline-secondary btn-sm w-100">
+                    <i class="bi bi-map me-1"></i>
+                    押上町からゐざさまでの徒歩ルート
+                </a>
+
+            </div>
+        </div>
+    </div>
+</div>
+
 
     <!-- 夕食メニューモーダル -->
     <div class="modal fade"
@@ -817,8 +1009,6 @@
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 
-    <!-- スケジュール専用JS -->
-    <script src="js/schedule.js"></script>
 
 </body>
 </html>

@@ -1,11 +1,13 @@
 
 /* ========================================
    AYtabi / Schedule
+   Travel Journal Style
 ======================================== */
 
 .schedule-page {
-    background: #f8f1e9;
-    color: #493b33;
+    background: #f8f5f5;
+    color: #493e3c;
+    font-family: 'Zen Maru Gothic', sans-serif;
 }
 
 .schedule-container {
@@ -14,34 +16,60 @@
     padding: 32px 0 100px;
 }
 
-/* ページタイトル */
+/* ========================================
+   ページタイトル
+======================================== */
 
 .schedule-intro {
     margin-bottom: 32px;
+    padding: 8px 0 4px;
 }
 
+.schedule-date {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 14px;
+    color: #c87565;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: .06em;
+}
+
+.schedule-date span:last-child {
+    padding-left: 12px;
+    border-left: 1px solid #dfc8c4;
+    color: #a99b98;
+    font-size: 10px;
+    letter-spacing: .12em;
+}
+
+/* 古いHTMLの見出しにも対応 */
 .schedule-eyebrow {
     display: flex;
     justify-content: space-between;
     gap: 12px;
     margin-bottom: 14px;
-    color: #bc765a;
+    color: #c87565;
     font-size: 10px;
     font-weight: 700;
     letter-spacing: .12em;
 }
 
 .schedule-intro h1 {
-    margin: 0 0 10px;
-    font-size: clamp(25px, 5vw, 36px);
-    font-weight: 700;
-    letter-spacing: .04em;
+    margin: 0 0 12px;
+    color: #493e3c;
+    font-size: clamp(26px, 6vw, 36px);
+    font-weight: 800;
+    letter-spacing: .02em;
 }
 
 .schedule-intro > p {
     margin: 0;
-    color: #8b8079;
+    color: #8e8080;
     font-size: 13px;
+    font-weight: 400;
+    line-height: 1.9;
 }
 
 /* ========================================
@@ -57,21 +85,25 @@
     position: absolute;
     top: 18px;
     bottom: 25px;
-    left: 11px;
-    width: 2px;
-    background: #e3c5b5;
+    left: 10px;
+    width: 1px;
+    background: #decac7;
 }
 
 .timeline-spot,
 .timeline-transfer {
     position: relative;
     display: grid;
-    grid-template-columns: 24px minmax(0, 1fr);
+    grid-template-columns: 22px minmax(0, 1fr);
     column-gap: 12px;
 }
 
 .timeline-spot {
-    margin-bottom: 14px;
+    margin-bottom: 18px;
+}
+
+.timeline-transfer {
+    margin-bottom: 18px;
 }
 
 .timeline-marker,
@@ -82,70 +114,93 @@
 
 .timeline-dot {
     display: block;
-    width: 13px;
-    height: 13px;
+    width: 11px;
+    height: 11px;
     margin: 18px 0 0 5px;
-    border: 3px solid #c56b4b;
+    border: 2px solid #c87565;
     border-radius: 50%;
-    background: #fffdf9;
+    background: #c87565;
 }
 
-/* 予定カード */
+/* ========================================
+   予定カード
+======================================== */
 
 .timeline-spot-body {
+    position: relative;
     min-width: 0;
-    padding: 20px;
-    border: 1px solid #eadbd0;
-    border-radius: 16px;
-    background: #fffdf9;
-    box-shadow: 0 3px 12px rgba(70, 45, 30, .035);
+    padding: 19px 20px;
+    border: 1px solid #e9dddd;
+    border-radius: 15px;
+    background: #fffdfd;
+    box-shadow: 0 3px 12px rgba(73, 62, 60, .045);
+}
+
+/* 左端のアクセント */
+.timeline-spot-body::before {
+    content: "";
+    position: absolute;
+    top: 18px;
+    bottom: 18px;
+    left: 0;
+    width: 3px;
+    border-radius: 0 3px 3px 0;
+    background: #d69a8f;
 }
 
 .timeline-time {
     display: block;
-    margin-bottom: 4px;
-    color: #c56b4b;
+    margin-bottom: 9px;
+    color: #c87565;
     font-size: 23px;
-    font-weight: 700;
-    line-height: 1.25;
+    font-weight: 800;
+    line-height: 1.3;
+    letter-spacing: -.02em;
 }
 
+/* 英語の章ラベルは表示しない */
 .timeline-chapter {
-    display: block;
-    margin-bottom: 12px;
-    color: #b18b7a;
-    font-size: 10px;
-    font-weight: 700;
-    letter-spacing: .13em;
+    display: none;
 }
 
 .timeline-spot-body h2 {
-    margin: 0 0 7px;
+    margin: 0 0 8px;
+    color: #493e3c;
     font-size: 18px;
     font-weight: 700;
     line-height: 1.5;
+    letter-spacing: .01em;
 }
 
 .timeline-spot-body > p {
     margin: 0 0 12px;
-    color: #87776e;
+    color: #8e8080;
     font-size: 13px;
-    line-height: 1.7;
+    font-weight: 400;
+    line-height: 1.8;
 }
 
-/* スポット写真 */
+.timeline-small-note {
+    font-size: 12px !important;
+}
+
+/* ========================================
+   写真
+======================================== */
 
 .timeline-photo {
     display: block;
     width: 100%;
-    height: 210px;
-    margin: 14px 0;
-    border-radius: 11px;
+    height: 230px;
+    margin: 16px 0 12px;
+    border-radius: 8px;
     object-fit: cover;
     object-position: center;
 }
 
-/* リンク */
+/* ========================================
+   予定カード内リンク
+======================================== */
 
 .timeline-spot-link,
 .timeline-spot-actions a,
@@ -156,7 +211,8 @@
     padding: 7px 0;
     border: 0;
     background: transparent;
-    color: #b86b50;
+    color: #bd7061;
+    font-family: inherit;
     font-size: 12px;
     font-weight: 600;
     text-decoration: none;
@@ -166,47 +222,42 @@
 .timeline-spot-actions {
     display: flex;
     flex-wrap: wrap;
-    gap: 8px 18px;
+    gap: 10px 20px;
 }
 
 .timeline-spot-link:hover,
 .timeline-spot-actions a:hover,
 .dinner-menu-trigger:hover {
-    color: #944b34;
-}
-
-.timeline-small-note {
-    font-size: 12px !important;
+    color: #a85e52;
 }
 
 /* ========================================
-   移動区間
+   移動カード
+   予定より小さく・白抜き
 ======================================== */
-
-.timeline-transfer {
-    margin-bottom: 14px;
-}
 
 .transfer-icon {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 24px;
-    height: 24px;
-    margin-top: 14px;
-    border: 1px solid #e4c9b8;
+    width: 22px;
+    height: 22px;
+    margin-top: 12px;
+    border: 1px solid #e2c9c4;
     border-radius: 50%;
-    background: #f8f1e9;
-    color: #b86b50;
-    font-size: 12px;
+    background: #f8f5f5;
+    color: #b96b5d;
+    font-size: 11px;
 }
 
 .transfer-body {
     min-width: 0;
-    padding: 13px 16px;
-    border: 1px solid #ebdfd4;
-    border-radius: 12px;
-    background: #f3e8dd;
+    margin: 0 8px 0 4px;
+    padding: 12px 14px;
+    border: 1px solid #e9dddd;
+    border-radius: 11px;
+    background: #fffdfd;
+    box-shadow: none;
 }
 
 .transfer-heading {
@@ -215,55 +266,68 @@
     justify-content: space-between;
     flex-wrap: wrap;
     gap: 4px 10px;
-    margin-bottom: 5px;
+    margin-bottom: 4px;
 }
 
 .transfer-heading strong {
-    font-size: 13px;
+    color: #675754;
+    font-size: 12px;
+    font-weight: 700;
 }
 
 .transfer-duration {
-    color: #9c7868;
-    font-size: 11px;
+    color: #a39491;
+    font-size: 10px;
 }
 
 .transfer-route {
-    margin: 0 0 4px;
-    font-size: 12px;
+    margin: 0 0 3px;
+    color: #675754;
+    font-size: 11px;
     line-height: 1.6;
 }
 
 .transfer-note {
     margin: 0;
-    color: #8b8079;
-    font-size: 11px;
+    color: #9b8d89;
+    font-size: 10px;
     line-height: 1.6;
 }
 
 .transfer-actions {
     display: flex;
     flex-wrap: wrap;
-    gap: 8px;
-    margin-top: 10px;
+    gap: 6px;
+    margin-top: 8px;
 }
 
 .transfer-action {
     display: inline-flex;
     align-items: center;
     gap: 5px;
-    padding: 6px 10px;
-    border: 1px solid #e3c5b5;
-    border-radius: 8px;
-    background: #fffdf9;
-    color: #a95d42;
-    font-size: 11px;
+    padding: 5px 9px;
+    border: 1px solid #edddda;
+    border-radius: 7px;
+    background: #fff8f7;
+    color: #b96b5d;
+    font-family: inherit;
+    font-size: 10px;
     text-decoration: none;
     cursor: pointer;
 }
 
 .transfer-action:hover {
-    background: #fbeee6;
-    color: #944b34;
+    border-color: #d9b7b1;
+    background: #fbece9;
+    color: #a85e52;
+}
+
+/* ========================================
+   夕食カード
+======================================== */
+
+#schedule-06 .timeline-spot-body {
+    border-color: #e2c4bf;
 }
 
 /* ========================================
@@ -272,24 +336,26 @@
 
 .travel-modal {
     overflow: hidden;
-    border: 1px solid #eadbd0;
+    border: 1px solid #e9dddd;
     border-radius: 16px;
-    background: #fffdf9;
+    background: #fffdfd;
+    color: #493e3c;
+    font-family: 'Zen Maru Gothic', sans-serif;
 }
 
 .travel-modal .modal-header {
     padding: 18px 20px;
-    border-bottom: 1px solid #eadbd0;
+    border-bottom: 1px solid #e9dddd;
 }
 
 .travel-modal .modal-title {
-    color: #493b33;
+    color: #493e3c;
     font-weight: 700;
 }
 
 .travel-modal .modal-title i {
     margin-right: 6px;
-    color: #c56b4b;
+    color: #c87565;
 }
 
 .travel-modal .modal-body {
@@ -299,13 +365,35 @@
 }
 
 .modal-route {
-    color: #b86b50;
+    color: #bd7061;
     font-weight: 700;
 }
 
 .modal-muted {
-    color: #8b8079;
+    color: #8e8080;
     font-size: 12px;
+}
+
+/* HTML内のインライン背景色を統一 */
+.travel-modal .modal-body > .p-3.rounded-3 {
+    background: #f2eae8 !important;
+}
+
+.travel-modal .modal-body > .p-3.rounded-3 .fs-4 {
+    color: #c87565 !important;
+}
+
+/* モーダル内の公式リンク */
+.travel-modal .btn-outline-secondary {
+    border-color: #d9b7b1;
+    color: #b96b5d;
+    font-family: inherit;
+}
+
+.travel-modal .btn-outline-secondary:hover {
+    border-color: #c87565;
+    background: #c87565;
+    color: #fff;
 }
 
 /* ========================================
@@ -314,7 +402,7 @@
 
 .dinner-menu-label,
 .dinner-recommend-label {
-    color: #b86b50;
+    color: #bd7061;
     font-size: 10px;
     font-weight: 700;
     letter-spacing: .14em;
@@ -324,29 +412,32 @@
     margin-bottom: 20px;
     padding: 16px;
     border-radius: 12px;
-    background: #f8f1e9;
+    background: #f2eae8;
 }
 
 .dinner-recommend-text {
     margin: 10px 0;
+    color: #493e3c;
     font-size: 13px;
     line-height: 1.8;
 }
 
 .dinner-recommend-other {
     margin: 0;
-    color: #87776e;
+    color: #8e8080;
     font-size: 12px;
     line-height: 1.7;
 }
 
-/* カルーセル */
+/* ========================================
+   メニューカルーセル
+======================================== */
 
 #dinnerMenuCarousel {
     position: relative;
     overflow: hidden;
     border-radius: 12px;
-    background: #f3e8dd;
+    background: #f2eae8;
 }
 
 .dinner-menu-image {
@@ -369,8 +460,8 @@
     transform: translateY(-50%);
     border: 0;
     border-radius: 50%;
-    background: rgba(255, 253, 249, .92);
-    color: #b86b50;
+    background: rgba(255, 253, 253, .94);
+    color: #bd7061;
     cursor: pointer;
 }
 
@@ -382,7 +473,14 @@
     right: 10px;
 }
 
-/* ページ切り替え */
+.dinner-carousel-arrow:hover {
+    background: #fff;
+    color: #a85e52;
+}
+
+/* ========================================
+   メニューページ切り替え
+======================================== */
 
 .dinner-menu-pagination {
     display: flex;
@@ -393,23 +491,24 @@
 .dinner-page-button {
     flex: 1;
     padding: 10px 8px;
-    border: 1px solid #eadbd0;
+    border: 1px solid #e9dddd;
     border-radius: 9px;
-    background: #fffdf9;
-    color: #87776e;
+    background: #fffdfd;
+    color: #8e8080;
+    font-family: inherit;
     font-size: 11px;
     cursor: pointer;
 }
 
 .dinner-page-button.active {
-    border-color: #c56b4b;
-    background: #c56b4b;
-    color: white;
+    border-color: #c87565;
+    background: #c87565;
+    color: #fff;
 }
 
 .dinner-menu-notice {
     margin: 12px 0 0;
-    color: #8b8079;
+    color: #8e8080;
     font-size: 11px;
 }
 
@@ -418,13 +517,14 @@
 ======================================== */
 
 @media (max-width: 575px) {
+
     .schedule-container {
         width: calc(100% - 24px);
         padding-top: 24px;
     }
 
     .schedule-intro {
-        margin-bottom: 24px;
+        margin-bottom: 26px;
     }
 
     .schedule-eyebrow {
@@ -437,26 +537,81 @@
     }
 
     .timeline-spot-body {
-        padding: 15px;
+        padding: 17px 16px;
     }
 
     .timeline-time {
-        font-size: 21px;
+        font-size: 22px;
     }
 
     .timeline-spot-body h2 {
-        font-size: 16px;
+        font-size: 17px;
     }
 
     .timeline-photo {
-        height: 165px;
+        height: 190px;
     }
 
     .transfer-body {
-        padding: 12px;
+        padding: 10px 12px;
     }
 
     .travel-modal .modal-body {
         padding: 16px;
     }
 }
+
+
+/* 近鉄電車の候補 */
+
+.train-options {
+    display: grid;
+    gap: 9px;
+}
+
+.train-option {
+    padding: 12px 14px;
+    border: 1px solid #e9dddd;
+    border-radius: 11px;
+    background: #fffdfd;
+}
+
+.train-option.recommended {
+    border-color: #d7a49b;
+    background: #fff4f1;
+}
+
+.train-option-label {
+    display: inline-block;
+    margin-bottom: 4px;
+    color: #9b8d89;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.train-option.recommended .train-option-label {
+    color: #b96b5d;
+}
+
+.train-option-time {
+    color: #493e3c;
+    font-size: 21px;
+    font-weight: 800;
+    line-height: 1.5;
+}
+
+.train-option.recommended .train-option-time {
+    color: #c87565;
+}
+
+.train-option-time i {
+    margin: 0 5px;
+    font-size: 13px;
+}
+
+.train-option p {
+    margin: 3px 0 0;
+    color: #8e8080;
+    font-size: 11px;
+}
+

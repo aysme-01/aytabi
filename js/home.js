@@ -8,7 +8,7 @@ const schedules = [
         photo: "images/namba.jpg"
     },
     {
-        time: "10:31",
+        time: "10:30",
         title: "近鉄奈良駅 到着",
         description: "奈良観光スタート！",
         map: "https://www.google.com/maps/search/?api=1&query=近鉄奈良駅",

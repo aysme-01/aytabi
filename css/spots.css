@@ -1,11 +1,11 @@
 
 /* ========================================
    AYtabi / Spots
-======================================== */
+   ======================================== */
 
 .spots-page {
-    background: #f8f1e9;
-    color: #493b33;
+    background: #f8f5f5;
+    color: #493e3c;
 }
 
 .spots-container {
@@ -14,7 +14,9 @@
     padding: 32px 0 110px;
 }
 
-/* ページタイトル */
+/* ========================================
+   ページタイトル
+   ======================================== */
 
 .spots-intro {
     margin-bottom: 26px;
@@ -25,7 +27,7 @@
     justify-content: space-between;
     gap: 12px;
     margin-bottom: 14px;
-    color: #bc765a;
+    color: #c87565;
     font-size: 10px;
     font-weight: 700;
     letter-spacing: .12em;
@@ -40,13 +42,13 @@
 
 .spots-intro p {
     margin: 0;
-    color: #8b8079;
+    color: #8e8080;
     font-size: 13px;
 }
 
 /* ========================================
    カテゴリータブ
-======================================== */
+   ======================================== */
 
 .spot-tabs {
     display: grid;
@@ -55,7 +57,7 @@
     margin-bottom: 16px;
     padding: 5px;
     border-radius: 13px;
-    background: #eee1d6;
+    background: #f0e7e7;
 }
 
 .spot-tab {
@@ -64,24 +66,26 @@
     border: 0;
     border-radius: 9px;
     background: transparent;
-    color: #8b776b;
+    color: #8e8080;
     font-size: 13px;
     font-weight: 600;
     transition: background .2s, color .2s;
 }
 
 .spot-tab.active {
-    background: #fffdf9;
-    color: #b86b50;
-    box-shadow: 0 2px 7px rgba(70, 45, 30, .07);
+    background: #fffdfd;
+    color: #c87565;
+    box-shadow: 0 2px 7px rgba(73, 62, 60, .06);
 }
 
 .spot-tab:focus-visible {
-    outline: 2px solid #c56b4b;
+    outline: 2px solid #c87565;
     outline-offset: 2px;
 }
 
-/* 凡例 */
+/* ========================================
+   凡例
+   ======================================== */
 
 .spot-legend {
     display: flex;
@@ -89,21 +93,21 @@
     flex-wrap: wrap;
     gap: 14px;
     margin-bottom: 14px;
-    color: #9b8b80;
+    color: #8e8080;
     font-size: 11px;
 }
 
 .spot-legend .bi-check-circle-fill {
-    color: #c56b4b;
+    color: #c87565;
 }
 
 .spot-legend .bi-circle {
-    color: #b8aaa0;
+    color: #c7b9b9;
 }
 
 /* ========================================
    スポットカード
-======================================== */
+   ======================================== */
 
 .spot-grid {
     display: grid;
@@ -117,34 +121,36 @@
     min-width: 0;
     padding: 0;
     overflow: hidden;
-    border: 1px solid #eadbd0;
+    border: 1px solid #eadfdf;
     border-radius: 15px;
-    background: #fffdf9;
-    color: inherit;
+    background: #fffdfd;
+    color: #493e3c;
     text-align: left;
     cursor: pointer;
-    box-shadow: 0 3px 12px rgba(70, 45, 30, .035);
+    box-shadow: 0 3px 12px rgba(73, 62, 60, .035);
     transition: transform .2s, box-shadow .2s;
 }
 
 .spot-tile:hover {
     transform: translateY(-2px);
-    box-shadow: 0 6px 18px rgba(70, 45, 30, .09);
+    box-shadow: 0 6px 18px rgba(73, 62, 60, .09);
 }
 
 .spot-tile:focus-visible {
-    outline: 2px solid #c56b4b;
+    outline: 2px solid #c87565;
     outline-offset: 3px;
 }
 
-/* 写真 */
+/* ========================================
+   カード写真
+   ======================================== */
 
 .spot-tile-photo {
     position: relative;
     width: 100%;
     aspect-ratio: 4 / 3;
     overflow: hidden;
-    background: #e9ddd2;
+    background: #eee5e5;
 }
 
 .spot-tile-photo img {
@@ -159,7 +165,9 @@
     transform: scale(1.04);
 }
 
-/* ステータス */
+/* ========================================
+   ステータス
+   ======================================== */
 
 .spot-status {
     position: absolute;
@@ -177,16 +185,18 @@
 }
 
 .spot-status.planned {
-    background: #c56b4b;
-    color: white;
+    background: #c87565;
+    color: #fff;
 }
 
 .spot-status.optional {
-    background: rgba(255, 253, 249, .95);
-    color: #8b776b;
+    background: rgba(255, 253, 253, .96);
+    color: #8e8080;
 }
 
-/* カード本文 */
+/* ========================================
+   カード本文
+   ======================================== */
 
 .spot-tile-body {
     padding: 14px;
@@ -195,7 +205,7 @@
 .spot-tile-type {
     display: block;
     margin-bottom: 7px;
-    color: #b86b50;
+    color: #c87565;
     font-size: 10px;
     font-weight: 700;
     letter-spacing: .09em;
@@ -203,6 +213,7 @@
 
 .spot-tile-body h2 {
     margin: 0 0 6px;
+    color: #493e3c;
     font-size: 16px;
     font-weight: 700;
     line-height: 1.5;
@@ -211,38 +222,38 @@
 
 .spot-tile-body p {
     margin: 0;
-    color: #8b8079;
+    color: #8e8080;
     font-size: 12px;
     line-height: 1.6;
 }
 
 /* ========================================
    詳細モーダル
-======================================== */
+   ======================================== */
 
 .spot-modal {
     overflow: hidden;
-    border: 1px solid #eadbd0;
+    border: 1px solid #eadfdf;
     border-radius: 17px;
-    background: #fffdf9;
+    background: #fffdfd;
 }
 
 .spot-modal .modal-header {
     align-items: flex-start;
     gap: 12px;
     padding: 19px 20px;
-    border-bottom: 1px solid #eadbd0;
+    border-bottom: 1px solid #eadfdf;
 }
 
 .spot-modal .modal-title {
     margin-top: 4px;
-    color: #493b33;
+    color: #493e3c;
     font-size: 21px;
     font-weight: 700;
 }
 
 .spot-modal-eyebrow {
-    color: #b86b50;
+    color: #c87565;
     font-size: 10px;
     font-weight: 700;
     letter-spacing: .12em;
@@ -263,16 +274,18 @@
 
 .spot-modal-description {
     margin: 0 0 19px;
-    color: #675950;
+    color: #665b59;
     font-size: 13px;
     line-height: 1.9;
 }
 
-/* 基本情報 */
+/* ========================================
+   モーダル基本情報
+   ======================================== */
 
 .spot-modal-info {
     margin: 0 0 18px;
-    border-top: 1px solid #eee3d9;
+    border-top: 1px solid #eee5e5;
 }
 
 .spot-modal-info > div {
@@ -280,11 +293,11 @@
     grid-template-columns: 95px minmax(0, 1fr);
     gap: 12px;
     padding: 11px 0;
-    border-bottom: 1px solid #eee3d9;
+    border-bottom: 1px solid #eee5e5;
 }
 
 .spot-modal-info dt {
-    color: #9b887b;
+    color: #8e8080;
     font-size: 12px;
     font-weight: 500;
 }
@@ -292,7 +305,7 @@
 .spot-modal-info dd {
     min-width: 0;
     margin: 0;
-    color: #493b33;
+    color: #493e3c;
     font-size: 12px;
     font-weight: 600;
     line-height: 1.6;
@@ -301,12 +314,14 @@
 
 .spot-modal-note {
     margin: 0 0 17px;
-    color: #a56d55;
+    color: #b57569;
     font-size: 12px;
     line-height: 1.7;
 }
 
-/* モーダル内リンク */
+/* ========================================
+   モーダル内リンク
+   ======================================== */
 
 .spot-modal-links {
     display: flex;
@@ -321,25 +336,32 @@
     gap: 7px;
     min-height: 38px;
     padding: 9px 13px;
-    border: 1px solid #e3c5b5;
+    border: 1px solid #e8ceca;
     border-radius: 9px;
-    background: #f8f1e9;
-    color: #a95d42;
+    background: #f8f0f0;
+    color: #b56d60;
     font-size: 12px;
     font-weight: 600;
     text-decoration: none;
+    transition: background .2s, color .2s;
 }
 
 .spot-modal-links a:hover {
-    background: #f0ded0;
-    color: #944b34;
+    background: #f1e2e2;
+    color: #a45c50;
+}
+
+.spot-modal-links a:focus-visible {
+    outline: 2px solid #c87565;
+    outline-offset: 2px;
 }
 
 /* ========================================
-   スマホ
-======================================== */
+   スマホ対応
+   ======================================== */
 
 @media (max-width: 575px) {
+
     .spots-container {
         width: calc(100% - 24px);
         padding-top: 24px;
